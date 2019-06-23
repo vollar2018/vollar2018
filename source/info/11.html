@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from www.vollar.us/source/info/11 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 18 Jun 2019 02:56:43 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>V-Dimension</title>
+        <meta name="keywords" content="V-Dimensi,blockchain">
+        <meta name="description" content="V-Dimensio">
+        <link rel="shortcut icon" href="../../statics/images/favicon.ico">
+        <link href="../../statics/css/common.css" rel="stylesheet"/>
+        <script src="../../statics/libs/jquery.min.js"></script>
+        <script src="../../statics/libs/jquery.cookie.js"></script>
+        <script src="../../statics/plugins/layer/layer.js"></script>
+        <script src="../../statics/plugins/qrcode/qrcode.min.js"></script>
+
+        <script>
+            function numFormat(num) {
+                var c = (num.toString().indexOf ('.') !== -1) ? num.toLocaleString() : num.toString().replace(/(\d)(?=(?:\d{3})+$)/g, '$1,');
+                return c;
+            }
+
+            $.ajaxSetup({
+                layerIndex:-1,
+                beforeSend: function(jqXHR, settings) {
+                    this.layerIndex = layer.load(1);
+                },
+                complete: function () {
+                    layer.close(this.layerIndex);
+                },
+                error: function (jqXHR, status, e) {
+                    layer.alert('Data request failed, please try again!');
+                }
+            });
+        </script>
+    </head>
+
+    <body>
+        <div id="root">
+            <link href="../../statics/css/header.css" rel="stylesheet">
+
+<style>
+    .header-c-m-m a.nav-active{
+        font-size: 18px;
+        color: #4A90E2;
+        font-weight: bold;
+    }
+</style>
+
+<div class="header-container">
+    <div class="header-c-m">
+        <div class="header-c-m-l"></div>
+        <div class="header-c-m-m">
+            <ul>
+                    <li><a href="../../index.html">Home</a></li>
+
+                    <li><a href="../../icex.html">CEX</a></li>
+
+                <li><a href="../../game.html">The Games</a></li>
+
+                    <li><a href="../../whats.html">WHAT'S V</a></li>
+
+                <li><a href="../../paper.html">Ecology</a></li>
+
+                    <li><a class="nav-active" href="../../source.html">Download</a></li>
+
+                    <li><a href="../../faq.html">FAQ</a></li>
+            </ul>
+        </div>
+        <div class="header-c-m-r">
+            <div class="current_lang">
+                <div class="lang">
+                    <span class="lang-txt">English</span>
+                    <span class="fa fa-chevron-down chevron"></span>
+                </div>
+            </div>
+            <div class="more_lang">
+                <div class="lang selected" data-value='en_US' data-en="English" id="en_US">
+                    <span class="lang-txt">English</span>
+                </div>
+                <div class="lang" data-value='de_DE' data-en="Deutsch" id="de_DE">
+                    <span class="lang-txt">Deutsch</span>
+                </div>
+                <div class="lang" data-value='es_ES' data-en="Español" id="es_ES">
+                    <span class="lang-txt">Español</span>
+                </div>
+                <div class="lang" data-value='fr_FR' data-en="Français" id="fr_FR">
+                    <span class="lang-txt">Français</span>
+                </div>
+                <div class="lang" data-value="en_MY" data-en="Malay" id="en_MY">
+                    <span class="lang-txt">Malay</span>
+                </div>
+                <div class="lang" data-value="pt_PT" data-en="Português" id="pt_PT">
+                    <span class="lang-txt">Português</span>
+                </div>
+                <div class="lang" data-value='ru_RU' data-en="русский" id="ru_RU">
+                    <span class="lang-txt">русский</span>
+                </div>
+                <div class="lang" data-value="hi_HI" data-en="हिन्दी" id="hi_HI">
+                    <span class="lang-txt">हिन्दी</span>
+                </div>
+                <div class="lang" data-value="fa_FA" data-en="فارسی" id="fa_FA">
+                    <span class="lang-txt">فارسی</span>
+                </div>
+                <div class="lang" data-value='ko_KR' data-en="한국의" id="ko_KR">
+                    <span class="lang-txt">한국의</span>
+                </div>
+                <div class="lang" data-value='ja_JP' data-en="日本の" id="ja_JP">
+                    <span class="lang-txt">日本の</span>
+                </div>
+                <div class="lang" data-value='zh_HK' data-en="中文(繁体)" id="zh_HK">
+                    <span class="lang-txt">中文(繁体)</span>
+                </div>
+                <div class="lang" data-value='zh_CN' data-en="中文(简体)" id="zh_CN">
+                    <span class="lang-txt">中文(简体)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    $(document).ready(function(){
+
+        $('.feature').on('click',function(){
+            layer.msg('Stay Tuned', {
+                skin: 'demo-class',
+                time: 2000,
+            });
+        });
+
+        $('.header-c-m-l').on('click',function(){
+            window.location.href='../../index.html';
+        });
+
+        var cookieLang = $.cookie("lang");
+        var img = $('#' + cookieLang).find('img').attr('src');
+        var lang = $('#' + cookieLang).attr('data-en');
+        $('.current_lang .lang-txt').text(lang);
+        $('.current_lang img').attr('src', img);
+        $('#' + cookieLang).addClass('selected').siblings().removeClass('selected');
+
+        $(document).click( function(e) {
+            $('.header-c-m-r, .more_lang').removeClass('active');
+        });
+
+        $('.header-c-m-r .current_lang').click(function(e){
+            e.stopPropagation();
+            $(this).parent().toggleClass('active');
+
+            setTimeout(function(){
+                $('.more_lang').toggleClass('active');
+            }, 5);
+        });
+
+        $('.more_lang .lang').click(function(){
+            $(this).addClass('selected').siblings().removeClass('selected');
+            $('.more_lang').removeClass('active');
+
+            var img = $(this).find('img').attr('src');
+            var lang = $(this).attr('data-value');
+
+
+            $('.current_lang .lang-txt').text(lang);
+            $('.current_lang img').attr('src', img);
+
+            $.cookie("lang", lang, { expires: 30, path:'/'});
+            window.location.reload();
+        });
+    });
+</script>
+<link href="../../statics/css/source/source.css" rel="stylesheet">
+
+
+<div id="dialog">
+    <div class="dialog-header">
+        <div class="dialog-header-title">
+            <p class="dialog-header-title-p">Note</p>
+        </div>
+        <div class="dialog-header-close">
+            <a onclick="closeBg();"> <img src="../../statics/images/img-close.png"> </a>
+        </div>
+    </div>
+    <div class="dialog-body" id="downloadDialog">
+        <!--<p style="text-align: left;font-size: 14px;line-height: 26px;color: #2E4162;">-->
+        <p style="text-align: left;font-size: 14px;line-height: 26px;color: #2E4162;">Before downloading the assets, please first check whether your computer needs some certain application(s) to disable any Internet browsing restrictions. After that use the Tor browser to visit our site and make the download. For specific operations you can refer to ”<a style="ont-size: 14px;color: #4A90E2;" href="javascript:void(0)">Navigating to the Official Deep Web Site</a>”tutorial video to see how to use the Tor Browser. You may also use a local download to complete download and installation.</p>
+        <!--</p>-->
+    </div>
+    <div class="dialog-bottom" id="dialog-bottom">
+        <div class="dialog-bottom-left">
+            <button class="dialog-button" onclick="closeBg()">Confirm</button>
+        </div>
+    </div>
+</div>
+
+<div class="src-container">
+    <div class="src-main">
+        <div class="src-m-h">
+            <h1>Downloads</h1>
+        </div>
+        <div class="src-m-b">
+            <div class="tabs-underline">
+                <div class="lineBorder"></div>
+                <div class="tabs-content-placeholder">
+                    <div class="tab-content-active" id="sourceInfo">
+
+                        <div class="src-info">
+                            <div class="src-info-l">
+                                <h1>VDS Embrace Decentralized Business and a Life of Freedom</h1>
+                                <p> </p>
+                            </div>
+                            <div class="src-info-r">
+                                <a class="source-button-white download">Download Source File(s)</a>
+                                <a class="source-button" onclick="window.open('https://ipfs.io/ipfs/QmUG7xJtC4prsuBuf1fnQGDhUdm3pzzviR6HKqZCUdyomh')">Local Downloads</a>
+                            </div>
+                        </div>
+                        <div class="lineBorder"></div>
+                        <div class="src-info">
+                            <div class="src-info-l">
+                                <h1>Unlock Currency Freedom,Defend Wealth Privacy</h1>
+                                <p> </p>
+                            </div>
+                            <div class="src-info-r">
+                                <a class="source-button-white download">Download Source File(s)</a>
+                                <a class="source-button" onclick="window.open('https://ipfs.io/ipfs/QmQL3tw4jVTs8abU8payX86RKc8HggRWBtNUgD8kKukMcJ')">Local Downloads</a>
+                            </div>
+                        </div>
+                        <div class="lineBorder"></div>
+                        <div class="src-info">
+                            <div class="src-info-l">
+                                <h1>We Are Born Great, We Are Born Free-VDS</h1>
+                                <p> </p>
+                            </div>
+                            <div class="src-info-r">
+                                <a class="source-button-white download">Download Source File(s)</a>
+                                <a class="source-button" onclick="window.open('https://ipfs.io/ipfs/QmXY1zw1kFXRQWvNVM2oYW6SAGXExgdgWmsAPpbKidiKie')">Local Downloads</a>
+                            </div>
+                        </div>
+                        <div class="lineBorder"></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+
+        bindClick();
+
+        var widget = $('.tabs-underline');
+        var tabs = widget.find('ul a');
+
+        tabs.on('click', function (e) {
+            e.preventDefault();
+
+            var type = $(this).data('type');
+            tabs.removeClass('tab-active');
+            $(this).addClass('tab-active');
+
+            $.get('/source/' + type, function(data, success){
+                var sourceList = data.page;
+                if(sourceList && sourceList.length>0) {
+                    var divInfo = '';
+                    sourceList.forEach(function (val, index) {
+
+                        divInfo += ('<div class="src-info">\n' +
+                            '  <div class="src-info-l">\n' +
+                            '      <h1>'+val.title+'</h1>\n' +
+                            // '      <p>'+val.description+'</p>\n' +
+                            '      <p></p>\n' +
+                            '  </div>\n' +
+                            '  <div class="src-info-r">\n' +
+                            '      <a class="source-button" onclick="window.open(\''+val.downloadUrl+'\')">Local Downloads</a>' +
+                            '  </div>\n' +
+                            '</div>\n' +
+                            '<div class="lineBorder"></div>');
+                    });
+                    $('#sourceInfo').empty();
+                    $('#sourceInfo').append(divInfo);
+                }else {
+                    $('#sourceInfo').empty();
+                    $('#sourceInfo').append('<div>...</div>');
+                }
+
+                bindClick();
+            });
+        });
+    });
+
+    function bindClick() {
+        $(".download").click(
+            function() {
+
+                var info = '<p style="text-align: left;font-size: 14px;line-height: 26px;color: #2E4162;">Before downloading the assets, please first check whether your computer needs some certain application(s) to disable any Internet browsing restrictions. After that use the Tor browser to visit our site and make the download. For specific operations you can refer to ”<a style="ont-size: 14px;color: #4A90E2;" href="javascript:void(0)">Navigating to the Official Deep Web Site</a>”tutorial video to see how to use the Tor Browser. You may also use a local download to complete download and installation.</p>';
+
+                $('#downloadDialog').empty();
+                $('#downloadDialog').append(info);
+
+                showBg();
+            }
+        );
+
+        $(".local").click(
+            function() {
+
+                showBgLocal();
+            }
+        );
+
+    }
+
+    function showBg() {
+        $("#dialog").show();
+
+        $('.header-container').addClass('add-blur');
+        $('.src-container').addClass('add-blur');
+        $('.footer-bg').addClass('add-blur');
+        $('body').addClass('add-overflow');
+    }
+
+    function closeBg() {
+        $("#dialog").hide();
+
+        $('.header-container').removeClass('add-blur');
+        $('.src-container').removeClass('add-blur');
+        $('.footer-bg').removeClass('add-blur');
+        $('body').removeClass('add-overflow');
+    }
+
+
+    function showBgLocal() {
+        $("#dialog-local").show();
+
+        $('.header-container').addClass('add-blur');
+        $('.src-container').addClass('add-blur');
+        $('.footer-bg').addClass('add-blur');
+        $('body').addClass('add-overflow');
+    }
+
+    function closeBgLocal() {
+        $("#dialog-local").hide();
+
+        $('.header-container').removeClass('add-blur');
+        $('.src-container').removeClass('add-blur');
+        $('.footer-bg').removeClass('add-blur');
+        $('body').removeClass('add-overflow');
+    }
+
+</script>
+
+
+<link href="../../statics/css/footer.css" rel="stylesheet">
+
+<div class="footer-bg">
+    <div class="footer-nav">
+        <div class="footer-nav-left">
+            <img style="width:163px;height:113px;" src="../../statics/images/img-banner-vds-1.png">
+        </div>
+        <div class="footer-nav-right">
+            <table style="border-collapse:separate; border-spacing:110px 20px;">
+                <tr>
+                    <td noWrap="noWrap" class="footer-nav-td1">Introduction</td>
+                    <td noWrap="noWrap" class="footer-nav-td1">Download</td>
+                    <td noWrap="noWrap" class="footer-nav-td1">Other</td>
+                </tr>
+                <tr>
+                    <td noWrap="noWrap" class="footer-nav-td2"><a href="../../whats.html">What's V</a></td>
+                    <td noWrap="noWrap" class="footer-nav-td2"><a href="../../source.html">APP/PC</a></td>
+                    <td noWrap="noWrap" class="footer-nav-td2"><a href="../../faq.html">FAQ</a></td>
+                </tr>
+                <tr>
+                    <td noWrap="noWrap" class="footer-nav-td2"><a href="../../cex.html">CEX</a></td>
+                    <td noWrap="noWrap" class="footer-nav-td2"><a href="../../source.html">Other</a></td>
+                    <td noWrap="noWrap" class="footer-nav-td2"></td>
+                </tr>
+                <tr>
+                    <td noWrap="noWrap" class="footer-nav-td2"><a href="../../game.html">Top 10</a></td>
+                    <td noWrap="noWrap" class="footer-nav-td2"></td>
+                    <td noWrap="noWrap" class="footer-nav-td2"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="footer-nav-qrcode">
+            <div class="qrcode-container">
+                <div style="background: #FFFFFF;width:160px; height:160px;padding: 10px;border-radius:8px;margin: 0 auto;">
+                    <div id="qrcode"></div>
+                </div>
+                <p>Join My Team! Activate Your VID!</p>
+                <p class="addr-hidden" title="VcavCD4BWnCJ7wTr7SxJhGqVvubmTrfNcAa">VcavCD4BWnCJ7wTr7SxJhGqVvubmTrfNcAa</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    var qrcode = new QRCode(document.getElementById("qrcode"), {
+        text: "VcavCD4BWnCJ7wTr7SxJhGqVvubmTrfNcAa",
+        width: 140,
+        height: 140,
+        colorDark : "#000000",
+        colorLight : "#ffffff",
+        correctLevel : QRCode.CorrectLevel.H
+    });
+</script>
+        </div>
+    </body>
+
+<!-- Mirrored from www.vollar.us/source/info/11 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 18 Jun 2019 02:56:43 GMT -->
+</html>

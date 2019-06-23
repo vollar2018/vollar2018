@@ -1,0 +1,102 @@
+body{
+    background: #1B1B28;
+}
+
+.icox-bg{
+    height: 399px;
+    background: url("../../images/cex-bg.png") no-repeat center bottom;
+}
+
+.icox-container{
+    width: 1300px;
+    height: 399px;
+    margin: 0px auto;
+}
+
+.icox-body{
+    padding: 90px 0px;
+    background: #d8d8d8;
+    margin: -20px auto 0px auto;
+    min-width: 1300px;
+}
+
+.icox-b-container{
+    width: 1080px;
+    background: #d8d8d8;
+    margin: 0px auto;
+}
+
+.td-r{
+    font-size: 14px;
+    color: #FFFFFF;;
+    text-align: right;
+}
+
+.td-l{
+    font-size: 14px;
+    color: #7385A2;
+    text-align: left;
+}
+
+.icox-b-container-div{
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+    padding-left: 140px;
+    padding-right: 140px;
+}
+
+.title{
+    font-size: 36px;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.desc{
+    font-size: 14px;
+    color: #2E4162;
+    text-align: center;
+    line-height: 30px;
+    text-align: center;
+    font-weight: normal;
+}
+
+.img-step{
+    margin: 0px auto 60px auto;
+    height: 319px;
+    width: 810px;
+}
+
+.img-group {
+    position: relative;
+    display: inline-block;
+    width: 240px;
+    margin-right: 15px;
+    margin-left: 15px;
+    float: left;
+    text-align: center;
+}
+.img-tip {
+    position: absolute;
+    bottom: 20px;
+    width: 240px;
+    margin:0px auto;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+.download-button{
+    background-color: #2E4162;
+    border: none;
+    color: #FFFFFF;
+    opacity: 1;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 12px;
+}

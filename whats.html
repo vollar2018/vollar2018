@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from www.vds.nz/whats by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 18 Jun 2019 02:55:44 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>V-Dimension</title>
+        <meta name="keywords" content="V-Dimensi,blockchain">
+        <meta name="description" content="V-Dimensio">
+        <link rel="shortcut icon" href="statics/images/favicon.ico">
+        <link href="statics/css/common.css" rel="stylesheet"/>
+        <script src="statics/libs/jquery.min.js"></script>
+        <script src="statics/libs/jquery.cookie.js"></script>
+        <script src="statics/plugins/layer/layer.js"></script>
+        <script src="statics/plugins/qrcode/qrcode.min.js"></script>
+
+        <script>
+            function numFormat(num) {
+                var c = (num.toString().indexOf ('.') !== -1) ? num.toLocaleString() : num.toString().replace(/(\d)(?=(?:\d{3})+$)/g, '$1,');
+                return c;
+            }
+
+            $.ajaxSetup({
+                layerIndex:-1,
+                beforeSend: function(jqXHR, settings) {
+                    this.layerIndex = layer.load(1);
+                },
+                complete: function () {
+                    layer.close(this.layerIndex);
+                },
+                error: function (jqXHR, status, e) {
+                    layer.alert('Data request failed, please try again!');
+                }
+            });
+        </script>
+    </head>
+
+    <body>
+        <div id="root">
+            <link href="statics/css/header.css" rel="stylesheet">
+
+<style>
+    .header-c-m-m a.nav-active{
+        font-size: 18px;
+        color: #4A90E2;
+        font-weight: bold;
+    }
+</style>
+
+<div class="header-container">
+    <div class="header-c-m">
+        <div class="header-c-m-l"></div>
+        <div class="header-c-m-m">
+            <ul>
+                    <li><a href="index.html">Home</a></li>
+
+                    <li><a href="icex.html">CEX</a></li>
+
+                <li><a href="game.html">The Games</a></li>
+
+                    <li><a class="nav-active" href="#">WHAT'S V</a></li>
+
+                <li><a href="paper.html">Ecology</a></li>
+
+                    <li><a href="source.html">Download</a></li>
+
+                    <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </div>
+        <div class="header-c-m-r">
+            <div class="current_lang">
+                <div class="lang">
+                    <span class="lang-txt">English</span>
+                    <span class="fa fa-chevron-down chevron"></span>
+                </div>
+            </div>
+            <div class="more_lang">
+                <div class="lang selected" data-value='en_US' data-en="English" id="en_US">
+                    <span class="lang-txt">English</span>
+                </div>
+                <div class="lang" data-value='de_DE' data-en="Deutsch" id="de_DE">
+                    <span class="lang-txt">Deutsch</span>
+                </div>
+                <div class="lang" data-value='es_ES' data-en="Español" id="es_ES">
+                    <span class="lang-txt">Español</span>
+                </div>
+                <div class="lang" data-value='fr_FR' data-en="Français" id="fr_FR">
+                    <span class="lang-txt">Français</span>
+                </div>
+                <div class="lang" data-value="en_MY" data-en="Malay" id="en_MY">
+                    <span class="lang-txt">Malay</span>
+                </div>
+                <div class="lang" data-value="pt_PT" data-en="Português" id="pt_PT">
+                    <span class="lang-txt">Português</span>
+                </div>
+                <div class="lang" data-value='ru_RU' data-en="русский" id="ru_RU">
+                    <span class="lang-txt">русский</span>
+                </div>
+                <div class="lang" data-value="hi_HI" data-en="हिन्दी" id="hi_HI">
+                    <span class="lang-txt">हिन्दी</span>
+                </div>
+                <div class="lang" data-value="fa_FA" data-en="فارسی" id="fa_FA">
+                    <span class="lang-txt">فارسی</span>
+                </div>
+                <div class="lang" data-value='ko_KR' data-en="한국의" id="ko_KR">
+                    <span class="lang-txt">한국의</span>
+                </div>
+                <div class="lang" data-value='ja_JP' data-en="日本の" id="ja_JP">
+                    <span class="lang-txt">日本の</span>
+                </div>
+                <div class="lang" data-value='zh_HK' data-en="中文(繁体)" id="zh_HK">
+                    <span class="lang-txt">中文(繁体)</span>
+                </div>
+                <div class="lang" data-value='zh_CN' data-en="中文(简体)" id="zh_CN">
+                    <span class="lang-txt">中文(简体)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    $(document).ready(function(){
+
+        $('.feature').on('click',function(){
+            layer.msg('Stay Tuned', {
+                skin: 'demo-class',
+                time: 2000,
+            });
+        });
+
+        $('.header-c-m-l').on('click',function(){
+            window.location.href='index.html';
+        });
+
+        var cookieLang = $.cookie("lang");
+        var img = $('#' + cookieLang).find('img').attr('src');
+        var lang = $('#' + cookieLang).attr('data-en');
+        $('.current_lang .lang-txt').text(lang);
+        $('.current_lang img').attr('src', img);
+        $('#' + cookieLang).addClass('selected').siblings().removeClass('selected');
+
+        $(document).click( function(e) {
+            $('.header-c-m-r, .more_lang').removeClass('active');
+        });
+
+        $('.header-c-m-r .current_lang').click(function(e){
+            e.stopPropagation();
+            $(this).parent().toggleClass('active');
+
+            setTimeout(function(){
+                $('.more_lang').toggleClass('active');
+            }, 5);
+        });
+
+        $('.more_lang .lang').click(function(){
+            $(this).addClass('selected').siblings().removeClass('selected');
+            $('.more_lang').removeClass('active');
+
+            var img = $(this).find('img').attr('src');
+            var lang = $(this).attr('data-value');
+
+
+            $('.current_lang .lang-txt').text(lang);
+            $('.current_lang img').attr('src', img);
+
+            $.cookie("lang", lang, { expires: 30, path:'/'});
+            window.location.reload();
+        });
+    });
+</script><link href="statics/css/whats/whats.css" rel="stylesheet">
+
+<div class="whats">
+    <div class="whats-banner">
+    </div>
+    <div class="whats-body">
+        <div class="whats-body-container">
+            <div class="whats-body-c-l">
+                <ul>
+                    <li>
+                        <div style="float: left;width:60px;height:31px;">
+                            <i id="whats-icon1" class="icon-w-nav1-c"></i>
+                        </div>
+                        <div style="float: left;width: 200px;height: 43px;">
+                            <a class="whats-a-click" data-item="1" href="javascript:void(0)">Product Overview</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div style="float: left;width:60px;height:31px;">
+                            <i id="whats-icon2" class="icon-w-nav2-u"></i>
+                        </div>
+                        <div style="float: left;width: 200px;height: 43px;">
+                            <a class="whats-a-unclick" data-item="2" href="javascript:void(0)">Philosophy</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div style="float: left;width:60px;height:31px;">
+                            <i id="whats-icon3" class="icon-w-nav3-u"></i>
+                        </div>
+                        <div style="float: left;width: 200px;height: 43px;">
+                            <a class="whats-a-unclick" data-item="3" href="javascript:void(0)">Product Functions</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div style="float: left;width:60px;height:31px;">
+                            <i id="whats-icon4" class="icon-w-nav4-u"></i>
+                        </div>
+                        <div style="float: left;width: 200px;height: 43px;">
+                            <a class="whats-a-unclick" data-item="4" href="javascript:void(0)">The Six Networks</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div style="float: left;width:60px;height:31px;">
+                            <i id="whats-icon5" class="icon-w-nav5-u"></i>
+                        </div>
+                        <div style="float: left;width: 200px;height: 43px;">
+                            <a class="whats-a-unclick" data-item="5" href="javascript:void(0)">Issuance Overview</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="whats-body-c-r">
+                <div class="whats-b-r-inner"></div>
+                <div class="whats-b-r-middle"></div>
+                <div class="whats-b-r-outer">
+                    <div class="whats-b-r-outer-p">
+                        <div class="body-left">
+                            <h1>Product Overview</h1>
+                            <p class="p-indent">Based on blockchain technology, and taking noncentralized anonymity as its design principle, a “privacy Internet” has been built on distributed nodes and opened up for all the public to use. On this basis, with precise and rigorous product design, the initial functions of VDS are run through the cryptocurrency wallet application to achieve user-friendly experience, construct a perfect decentralized ecology of finance & commerce, and ultimately craft the Noncentralized Consensus Society Full Ecology Future Currency Network. We call it V-Dimension (VDS).</p>
+                            <br>
+                            <br>
+                            <p class="p-indent">This is not only a new form of cryptocurrency, nor merely a new blockchain product; it presents a completely decentralized financial network, a truly disruptive business practice, and a re-shaping of the Internet. It is the door leading all mankind to freedom, and what’s more, an immortal idea and indestructible thought.</p>
+                        </div>
+                        <div class="body-right">
+                            <img src="statics/images/img-whats-logo.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="src-main">
+        <div class="src-m-h">
+            <h1>News</h1>
+        </div>
+        <div class="src-m-b">
+            <div class="tabs-underline">
+                <div class="lineBorder"></div>
+                <div class="tabs-content-placeholder">
+                    <div class="tab-content-active" id="sourceInfo">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="dialog">
+    <div class="dialog-header">
+        <div class="dialog-header-title">
+            <p class="dialog-header-title-p">Note</p>
+        </div>
+        <div class="dialog-header-close">
+            <a onclick="closeBg();"> <img src="statics/images/img-close.png"> </a>
+        </div>
+    </div>
+    <div class="dialog-body" id="downloadDialog">
+        <!--<p style="text-align: left;font-size: 14px;line-height: 26px;color: #2E4162;">-->
+        <p style="text-align: left;font-size: 14px;line-height: 26px;color: #2E4162;">Before downloading the assets, please first check whether your computer needs some certain application(s) to disable any Internet browsing restrictions. After that use the Tor browser to visit our site and make the download. For specific operations you can refer to ”<a style="ont-size: 14px;color: #4A90E2;" href="javascript:void(0)">Navigating to the Official Deep Web Site</a>”tutorial video to see how to use the Tor Browser. You may also use a local download to complete download and installation.</p>
+        <!--</p>-->
+    </div>
+    <div class="dialog-bottom" id="dialog-bottom">
+        <div class="dialog-bottom-left">
+            <button class="dialog-button" onclick="closeBg()">Confirm</button>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    $(document).ready(function() {
+        bindItemCheck();
+        bindClick();
+    });
+
+    function bindItemCheck() {
+        var items = ['1', '2', '3', '4', '5'];
+
+        $(".whats-body-c-l li a").click(
+            function(e) {
+                var item = $(this).data("item");
+
+                $(this).removeClass("whats-a-unclick").addClass("whats-a-click").parent().siblings().find("a").removeClass("whats-a-click").addClass("whats-a-unclick");
+
+                $.each(items, function (i, itm) {
+                    if(itm == item) {
+                        $("#whats-icon" + itm).removeClass("icon-w-nav" + itm + '-u').addClass("icon-w-nav" + itm + '-c');
+                    }else {
+                        $("#whats-icon" + itm).removeClass("icon-w-nav" + itm + '-c').addClass("icon-w-nav" + itm + '-u');
+                    }
+                });
+
+                $('.whats-b-r-outer-p').empty();
+
+                if(item == '1'){
+                    $('.whats-b-r-outer-p').append(
+                        "<div class=\"body-left\">\n" +
+                        "                            <h1>Product Overview</h1>\n" +
+                        "                            <p class=\"p-indent\">Based on blockchain technology, and taking noncentralized anonymity as its design principle, a “privacy Internet” has been built on distributed nodes and opened up for all the public to use. On this basis, with precise and rigorous product design, the initial functions of VDS are run through the cryptocurrency wallet application to achieve user-friendly experience, construct a perfect decentralized ecology of finance & commerce, and ultimately craft the Noncentralized Consensus Society Full Ecology Future Currency Network. We call it V-Dimension (VDS).</p>\n" +
+                        "                            <br>\n" +
+                        "                            <br>\n" +
+                        "                            <p class=\"p-indent\">This is not only a new form of cryptocurrency, nor merely a new blockchain product; it presents a completely decentralized financial network, a truly disruptive business practice, and a re-shaping of the Internet. It is the door leading all mankind to freedom, and what’s more, an immortal idea and indestructible thought.</p>\n" +
+                        "                        </div>\n" +
+                        "                        <div class=\"body-right\">\n" +
+                        "                            <img src=\"/statics/images/img-whats-logo.png\">\n" +
+                        "                        </div>");
+                }else if(item == '2'){
+                    $('.whats-b-r-outer-p').append(
+                        "<div class=\"body-left\">\n" +
+                        "                            <h1>Philosophy</h1>\n" +
+                        "                            <p class=\"p-indent\">Blockchain technology is breaking many beliefs traditionally held about privacy, wealth, and even freedom. It is also an unprecedented challenge for centralized financial systems and organizations. All of these will be endowed with new meanings in the ideal world realized by blockchain technology, where human beings are free to seek out their own, true selves.</p>\n" +
+                        "                            <br>\n" +
+                        "                            <br>\n" +
+                        "                            <p class=\"p-indent\">Future society will be a fully-integrated social body connected by blockchain. As an inevitable outcome of blockchain technology, VDS adopts the principle of decentralized design to achieve consensus of wealth, speech, innovation, networking and even ideological progress; it relies on the wisdom of all people to realize the freedom of the entire human community. This is the core philosophy of VDS; in this community of freedom, everyone is its owner and the world will obtain true freedom.</p>\n" +
+                        "                        </div>\n" +
+                        "                        <div class=\"body-right\">\n" +
+                        "                            <img src=\"/statics/images/img-whats-logo.png\">\n" +
+                        "                        </div>"
+                    );
+                }else if(item == '3'){
+                    $('.whats-b-r-outer-p').append(
+                        "<div class=\"body-left\">\n" +
+                        "                            <h1>Product Functions</h1>\n" +
+                        "                            <p class=\"p-indent\">The initial functions of VDS are Resonance Trade, the Trust Stamp Network, The Fission Promotion Games, Network-Wide Information Broadcast (VAD), Secret Chat, Anonymous Transactions, Smart Contracts, Distributed OTC Trade, Super Master Nodes, The Lottery, and the unique smart contract- Blockchain Business Contracts. All these functions work off one another to circulate and balance VDS's initial operating structure. Its financial balance, community promotions, business interconnectivity, value concentration, and network expansion will disrupt the ideas behind the centralized business paradigm.</p>\n" +
+                        "                            <br>\n" +
+                        "                            <br>\n" +
+                        "                            <p class=\"p-indent\">VDS will become a private communication network that is open for the whole world to use. It supports development of an independent web browser where every VDS address can serve as an anonymous IP address. All the applications of the centralized internet may be transplanted   into this privacy network by the people for the people. Through the joint efforts of the social community, a brand-new, decentralized ecology of internet freedom will be created.</p>\n" +
+                        "                        </div>\n" +
+                        "                        <div class=\"body-right\">\n" +
+                        "                            <img src=\"/statics/images/img-whats-logo.png\">\n" +
+                        "                        </div>"
+                    );
+                }else if(item == '4'){
+                    $('.whats-b-r-outer-p').append(
+                        "<div class=\"body-left\">\n" +
+                        "                            <h1>The Six Networks</h1>\n" +
+                        "                            <p class=\"p-indent\">Under the influences of these six major network systems, VDS has carried out the planning and integration of interpersonal communication, free finance, commercial connections, consumer capital, application implementation and networking freedom- as well as nurtured a non-centralized freedom ecology. In this noncentralized freedom ecology, we will completely free ourselves from many restrictions of centralization and solve many of its associated problems.</p>\n" +
+                        "                            <br>\n" +
+                        "                            <br>\n" +
+                        "                            <p class=\"p-indent\">With the support of these six major network systems, we will create a Non-centralized Consensus Society Full-Ecology Future Currency Network, build an active and thriving decentralized ecology of business freedom, and co-establish a brand-new decentralized consensus society of freedom. Let’s all embrace this consensus society of privacy, security, value-sharing, freedom and democracy; as it is a world of sunshine, love and hope!</p>\n" +
+                        "                        </div>\n" +
+                        "                        <div class=\"body-right\">\n" +
+                        "                            <img src=\"/statics/images/img-whats-logo.png\">\n" +
+                        "                        </div>"
+                    );
+                }else if(item == '5'){
+                    $('.whats-b-r-outer-p').append(
+                        "<div class=\"body-left\">\n" +
+                        "                            <h1>Issuance Overview</h1>\n" +
+                        "                            <p class=\"p-title\"><span>■</span>&nbsp;&nbsp;Basic Information</p>\n" +
+                        "\n" +
+                        "                            <table align=\"center\" cellpadding=\"2\" cellspacing=\"2\" style=\"width:100%\">\n" +
+                        "                                <tr>\n" +
+                        "                                    <td>Total Coins</td>\n" +
+                        "                                    <td>2,100,000,000 Vollar</td>\n" +
+                        "                                </tr>\n" +
+                        "                                <tr>\n" +
+                        "                                    <td>Timestamping Scheme</td>\n" +
+                        "                                    <td>Equihash+Scrypt</td>\n" +
+                        "                                </tr>\n" +
+                        "                                <tr>\n" +
+                        "                                    <td>Block Interval</td>\n" +
+                        "                                    <td>60s</td>\n" +
+                        "                                </tr>\n" +
+                        "                                <tr>\n" +
+                        "                                    <td>Block Size</td>\n" +
+                        "                                    <td>≤8M</td>\n" +
+                        "                                </tr>\n" +
+                        "                                <tr>\n" +
+                        "                                    <td>Initial Mining Reward</td>\n" +
+                        "                                    <td>500 Vollar</td>\n" +
+                        "                                </tr>\n" +
+                        "                                <tr>\n" +
+                        "                                    <td>Reduction Era</td>\n" +
+                        "                                    <td>211,680 Blocks</td>\n" +
+                        "                                </tr>\n" +
+                        "                                <tr>\n" +
+                        "                                    <td>Reduction Rate</td>\n" +
+                        "                                    <td>5%</td>\n" +
+                        "                                </tr>\n" +
+                        "                            </table>\n" +
+                        "\n" +
+                        "                            <br>\n" +
+                        "                            <p>In total there are 2.1 billion Vollar. The opening pre-mined coin count will be 100 million coins and the POW Issuance Equalization Mechanism will yield the remaining 2 billion.</p>\n" +
+                        "                            <br>\n" +
+                        "\n" +
+                        "                            <p class=\"p-title\"><span>■</span>&nbsp;&nbsp;Distribution of the 100 Million Pre-Mined Coins</p>\n" +
+                        "\n" +
+                        "                            <p>The 100 million pre-mine Vollar are to be used as start-up capital for this project accordingly; a 1:1 Bitcoin to Vollar airdrop into all the Bitcoin user accounts listed on the 558,000 block, initial financing for the VDS ecosystem, and as initial funds in the Resonance V-Pool. The account information for all 100 million pre-mined coins will be disclosed to the community.</p>\n" +
+                        "                            <br>\n" +
+                        "\n" +
+                        "                            <table align=\"center\" cellpadding=\"2\" cellspacing=\"2\" style=\"width:100%\">\n" +
+                        "                                <tr>\n" +
+                        "                                    <td colspan=\"2\">Initial Ecosystem Capital</td>\n" +
+                        "                                    <td>100,000,000 Vollar</td>\n" +
+                        "                                </tr>\n" +
+                        "                                <tr>\n" +
+                        "                                    <td rowspan=\"3\">Distribution</td>\n" +
+                        "                                    <td>BTC User 1:1 Airdrop</td>\n" +
+                        "                                    <td>17,475,000 Vollar</td>\n" +
+                        "                                </tr>\n" +
+                        "                                <tr>\n" +
+                        "                                    <td>VDS Ecosystem Initial Capital</td>\n" +
+                        "                                    <td>12,000,000 Vollar</td>\n" +
+                        "                                </tr>\n" +
+                        "                                <tr>\n" +
+                        "                                    <td>Resonance V-Pool Starting Capital</td>\n" +
+                        "                                    <td>70,525,000 Vollar</td>\n" +
+                        "                                </tr>\n" +
+                        "\n" +
+                        "                            </table>\n" +
+                        "                        </div>\n" +
+                        "                        <div class=\"body-right\">\n" +
+                        "                            <img src=\"/statics/images/img-whats-logo.png\">\n" +
+                        "                        </div>"
+                    );
+                }
+
+
+
+
+            }
+        );
+    }
+
+    function bindClick() {
+        $(".download").click(
+            function() {
+
+                var info = '<p style="text-align: left;font-size: 14px;line-height: 26px;color: #2E4162;">Before downloading the assets, please first check whether your computer needs some certain application(s) to disable any Internet browsing restrictions. After that use the Tor browser to visit our site and make the download. For specific operations you can refer to ”<a style="ont-size: 14px;color: #4A90E2;" href="javascript:void(0)">Navigating to the Official Deep Web Site</a>”tutorial video to see how to use the Tor Browser. You may also use a local download to complete download and installation.</p>';
+
+                $('#downloadDialog').empty();
+                $('#downloadDialog').append(info);
+
+                showBg();
+
+            }
+        );
+    }
+
+    function showBg() {
+        $("#dialog").show();
+
+        $('.header-container').addClass('add-blur');
+        $('.whats').addClass('add-blur');
+        $('.footer-bg').addClass('add-blur');
+        $('body').addClass('add-overflow');
+    }
+
+    function closeBg() {
+        $("#dialog").hide();
+
+        $('.header-container').removeClass('add-blur');
+        $('.whats').removeClass('add-blur');
+        $('.footer-bg').removeClass('add-blur');
+        $('body').removeClass('add-overflow');
+    }
+</script>
+<link href="statics/css/footer.css" rel="stylesheet">
+
+<div class="footer-bg">
+    <div class="footer-nav">
+        <div class="footer-nav-left">
+            <img style="width:163px;height:113px;" src="statics/images/img-banner-vds-1.png">
+        </div>
+        <div class="footer-nav-right">
+            <table style="border-collapse:separate; border-spacing:110px 20px;">
+                <tr>
+                    <td noWrap="noWrap" class="footer-nav-td1">Introduction</td>
+                    <td noWrap="noWrap" class="footer-nav-td1">Download</td>
+                    <td noWrap="noWrap" class="footer-nav-td1">Other</td>
+                </tr>
+                <tr>
+                    <td noWrap="noWrap" class="footer-nav-td2"><a href="whats.html">What's V</a></td>
+                    <td noWrap="noWrap" class="footer-nav-td2"><a href="source.html">APP/PC</a></td>
+                    <td noWrap="noWrap" class="footer-nav-td2"><a href="faq.html">FAQ</a></td>
+                </tr>
+                <tr>
+                    <td noWrap="noWrap" class="footer-nav-td2"><a href="cex.html">CEX</a></td>
+                    <td noWrap="noWrap" class="footer-nav-td2"><a href="source.html">Other</a></td>
+                    <td noWrap="noWrap" class="footer-nav-td2"></td>
+                </tr>
+                <tr>
+                    <td noWrap="noWrap" class="footer-nav-td2"><a href="game.html">Top 10</a></td>
+                    <td noWrap="noWrap" class="footer-nav-td2"></td>
+                    <td noWrap="noWrap" class="footer-nav-td2"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="footer-nav-qrcode">
+            <div class="qrcode-container">
+                <div style="background: #FFFFFF;width:160px; height:160px;padding: 10px;border-radius:8px;margin: 0 auto;">
+                    <div id="qrcode"></div>
+                </div>
+                <p>Join My Team! Activate Your VID!</p>
+                <p class="addr-hidden" title="VcbKd8K5tgEv9a5iphhVqttmbQh7qa67CYD">VcbKd8K5tgEv9a5iphhVqttmbQh7qa67CYD</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    var qrcode = new QRCode(document.getElementById("qrcode"), {
+        text: "VcbKd8K5tgEv9a5iphhVqttmbQh7qa67CYD",
+        width: 140,
+        height: 140,
+        colorDark : "#000000",
+        colorLight : "#ffffff",
+        correctLevel : QRCode.CorrectLevel.H
+    });
+</script>
+        </div>
+    </body>
+
+<!-- Mirrored from www.vds.nz/whats by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 18 Jun 2019 02:55:46 GMT -->
+</html>

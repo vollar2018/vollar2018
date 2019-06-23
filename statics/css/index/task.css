@@ -1,0 +1,116 @@
+.task-container{
+    height: 1021px;
+    width: 100%;
+    padding-top: 1px;
+    margin: -200px auto 0px auto;
+}
+.t-c-c{
+    height: 915px;
+    width: 1300px;
+    margin: 15px auto;
+}
+
+.task-container-bg{
+    width: 100%;
+    min-width:1300px;
+    height: 1021px;
+    position:absolute;
+    z-index: -1;
+}
+
+.task-title{
+    height: 80px;
+    margin: 285px 0px 10px 0px;
+}
+
+div.task-title h1 {
+    font-size: 36px;
+    color: #000000;
+    text-align: center;
+    font-weight: bold;
+}
+
+.task-body{
+    width: 1300px;
+    height: 250px;
+    /*margin: 40px 0px 40px 410px;*/
+}
+
+.t-b-l{
+    width: 35%;
+    height: 250px;
+    float: left;
+    /*margin: 40px 20px 40px 410px;*/
+}
+
+.t-b-l-h{
+    margin-top: 20px;
+}
+
+.t-b-l-t{
+    font-size: 20px;
+    color: #2E4162;
+    font-weight: normal;
+}
+
+.t-b-l-n{
+    font-size: 64px;
+    color: #2E4162;
+    font-weight: bold;
+}
+
+.button-click{
+    width: 180px;
+    height: 52px;
+}
+
+.t-b-l-i{
+    margin-top: 64px;
+}
+
+.t-b-l-l{
+    width: 10%;
+    height: 100%;
+    float: left;
+    padding-left:50px;
+}
+
+.t-b-l-line{
+    display: inline-block;
+    border: 1px solid #D8D8D8;
+    width: 0px;
+    height: 200px;
+    margin-top: 45px;
+}
+
+
+.t-b-r{
+    width: 55%;
+    height: 100%;
+    float: right;
+    padding-left: 100px;
+}
+
+
+
+
+.t-b-r th{
+    font-size: 18px;
+    color: #2E4162;
+    text-align: center;
+    padding: 5px;
+}
+.t-b-r td{
+    height: 30px;
+    vertical-align: bottom;
+    font-size: 14px;
+    color: #2E4162;
+    padding: 7px;
+    font-weight: normal;
+}
+
+.t-b-r .table-r{
+    font-size: 18px;
+    color: #2E4162;
+    font-weight: bold;
+}

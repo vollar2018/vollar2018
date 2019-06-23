@@ -1,0 +1,98 @@
+.paper-container {
+    height: 540px;
+    margin-top: 193px;
+}
+
+.paper-c{
+    height: 400px;
+    width: 1300px;
+    margin: 15px auto;
+}
+
+.paper-container-left {
+    margin: 20px 0px;
+    float: left;
+    width: 730px;
+    height: 350px;
+}
+
+.paper-container-right {
+    background-image: url("../../images/img-v.png");
+    width: 248px;
+    height: 338px;
+    margin: 0px 0px 0px 200px;
+    float: left;
+}
+
+
+.paper-container-left h1{
+    height: 50px;
+    font-size: 36px;
+    margin-top: 90px;
+
+    background-image:-webkit-linear-gradient(bottom,#D4DEEF,#B7C7E4,#6E7F9D);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.p-c-l-i{
+    ont-size: 14px;
+    color: #646F82;
+    line-height: 20px;
+    margin-top: 10px;
+}
+
+.p-c-l-d{
+    width: 100%;
+    height: 60px;
+    margin-top: 20px;
+}
+
+.p-c-l-b{
+    float: left
+}
+
+.p-c-l-u{
+    float: left;
+    margin: 15px 32px;
+    height: 40px;
+}
+
+.p-c-l-u a{
+    font-size: 14px;
+    color: #4A90E2;
+}
+
+.icon-git {
+    display: inline-block;
+    width: 26px;
+    height: 25px;
+    background: url("../../images/img-ico-git.png") no-repeat center center;
+    position: relative;
+    background-size: 100%;
+    margin-right: 10px;
+}
+
+.p-l {
+    height: 5px;
+    width: 100%;
+    min-width: 1300px;
+    margin: 90px 0px 0px 0px;
+    float: left;
+}
+
+.p-line {
+    display: inline-block;
+    border: 1px solid #868686;
+    opacity: 0.2;
+    width: 100%;
+    height: 0px;
+}
+
+.p-c-l-i p{
+    font-size: 14px;
+    color: #646F82;
+    letter-spacing: 0;
+    line-height: 28px;
+    font-weight: normal;
+}

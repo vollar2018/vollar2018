@@ -1,0 +1,264 @@
+body{
+    background: #1B1B28;
+}
+
+.paper-container {
+    width: 100%;
+    min-width: 1300px;
+    background: #EEEEEE;
+}
+
+.paper-banner {
+    width: 100%;
+    height: 399px;
+    background: #1B1B28;
+    background: url("../../images/img-source-1.jpg") no-repeat center bottom;
+}
+.paper-banner-c{
+    width: 1300px;
+    height: 400px;
+    margin: 0px auto;
+
+}
+.paper-b-l {
+    width: 40%;
+    height: 400px;
+    float: left;
+    margin: 0px auto;
+    padding-top: 70px;
+}
+
+.paper-b-l h1{
+    font-size: 36px;
+    color: #FFFFFF;
+    font-weight: bold
+}
+
+.p-1{
+    font-size: 14px;
+    color: #7385A2;
+    line-height: 30px;
+    font-weight: normal;
+    margin-top:20px;
+}
+
+.p-2{
+    font-size: 14px;
+    color: #7385A2;
+}
+
+.p-3{
+    font-size: 14px;
+    color: #7385A2;
+    line-height: 50px;
+}
+
+.p-3 a{
+    text-decoration: none;
+    font-size: 14px;
+    color: #4A90E2;
+}
+
+.paper-b-r {
+    width: 60%;
+    height: 400px;
+    float: left;
+}
+
+.paper-main {
+    width: 100%;
+    height: 100%;
+    padding-top: 50px;
+    background: #EEEEEE;
+}
+
+.paper-m-h {
+    width: 1300px;
+    height: 50px;
+    margin: 40px auto 50px auto;
+}
+
+div.paper-main .paper-m-h h1 {
+    font-size: 36px;
+    color: #000000;
+    text-align: left;
+    font-weight: bold;
+}
+
+.paper-m-b {
+    width: 1300px;
+    height: 100%;
+    margin: 10px auto;
+}
+
+
+.tabs-underline {
+    width: 100%;
+    box-sizing: border-box;
+    font: bold 18px sans-serif;
+    margin: 0px auto 30px auto;
+    text-align: center;
+    /*padding: 30px;*/
+}
+
+/* The tabs */
+
+.tabs-underline ul {
+    list-style: none;
+    text-align: left;
+
+    margin: 0;
+    padding: 0;
+}
+
+.tabs-underline ul li {
+    display: inline-block;
+    height: 34px;
+}
+
+.tabs-underline ul li a {
+    display: block;
+    text-decoration: none;
+    color: #7f888d;
+    font-size: 18px;
+
+    margin: 0 60px 15px 0;
+    padding-bottom: 5px;
+}
+
+.tabs-underline ul li a.tab-active {
+    color: #656a6d;
+    border-bottom: 5px solid #4A90E2;
+}
+
+/* The content */
+
+.tabs-underline .tabs-content-placeholder {
+    overflow: hidden;
+    font-weight: normal;
+    /*margin-top:40px;*/
+}
+
+/*.tabs-underline .tabs-content-placeholder div {*/
+/*display: none;*/
+/*}*/
+
+.tabs-underline .tabs-content-placeholder div.tab-content-active {
+    display: block;
+}
+
+.lineBorder {
+    height: 2px;
+    overflow: hidden;
+    border-bottom: 1px solid #D8D8D8;
+    background: #D8D8D8;
+}
+
+/** body info **/
+.paper-info{
+    width: 100%;
+    height: 71px;
+    margin-top: 30px;
+}
+
+.paper-info-l h1{
+    font-size: 20px;
+    color: #2E4162;
+    text-align: left;
+    font-weight: bold;
+
+    width:620px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+.paper-info-l p{
+    font-size: 14px;
+    color: #7385A2;
+    text-align: left;
+    padding-top: 14px;
+    font-weight: normal;
+
+    width:930px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+.paper-info-l{
+    width: 60%;
+    height: 69px;
+    float: left;
+}
+
+.paper-info-m{
+    width: 12%;
+    height: 69px;
+    float: left;
+
+    font-size: 20px;
+    color: #4A90E2;
+}
+
+.paper-info-r{
+    width: 20%;
+    height: 69px;
+    float:right;
+}
+
+
+.paper-info-l1 h1{
+    font-size: 20px;
+    color: #7385A2;
+    text-align: left;
+}
+
+.paper-info-l1 p{
+    font-size: 14px;
+    color: #7385A2;
+    text-align: left;
+    padding-top: 14px;
+}
+
+.paper-info-l1{
+    width: 80%;
+    height: 69px;
+    float: left;
+}
+
+.paper-info-r1{
+    width: 20%;
+    height: 69px;
+    float:right;
+
+    font-size: 20px;
+    color: #7385A2;
+}
+
+.paper-button {
+    background-color: #2E4162;
+    border: none;
+    color: #FFFFFF;
+    opacity: 1;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+.paper-button:hover {
+    background-color: #45597C;
+    border: none;
+    color: #FFFFFF;
+    opacity: 1;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 8px;
+}

@@ -1,0 +1,232 @@
+body{
+    background: #1b1b28;
+}
+
+/** dialog **/
+#dialog {
+    background: #F8F8F8;
+    /*height: 316px;*/
+    left: 40%;
+    margin: -200px 0 0 -100px;
+    position: fixed !important;
+    position: absolute;
+    top:50%;
+    width: 600px;
+    z-index: 1;
+    display: none;
+}
+div#dialog .dialog-header {
+    width: 600px;
+    height: 50px;
+    background: #2E4162;
+}
+div#dialog .dialog-header p, a {
+    font-size: 14px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+div#dialog .dialog-header .dialog-header-title{
+    width: 560px;
+    height: 50px;
+    padding: 13px 0px 13px 40px;
+    float: left;
+}
+div#dialog .dialog-header .dialog-header-title .dialog-header-title-p{
+    margin: auto;
+    text-align: center;
+    font-size: 18px;
+}
+div#dialog .dialog-header .dialog-header-close{
+    width: 30px;
+    height: 50px;
+    padding: 17px 0px 17px 0px;
+    float: right;
+}
+div#dialog .dialog-body {
+    width: 540px;
+    /*height: 120px;*/
+    margin: 50px 30px;
+}
+div#dialog .dialog-body td{
+    font-size: 14px;
+    color: #2E4162;
+}
+div#dialog .dialog-body .dialog-td-l{
+    text-align: left;
+}
+div#dialog .dialog-body .dialog-td-r{
+    text-align: right;
+}
+div#dialog .dialog-bottom{
+    height: 50px;
+    width: 540px;
+    margin: 10px 30px;
+}
+div#dialog .dialog-bottom .dialog-bottom-left{
+    width: 210px;
+    margin: 0 auto;
+}
+
+div#dialog .dialog-button{
+    background-color: #2E4162;
+    border-radius: 8px;
+    border: none;
+    color: #FFFFFF;
+    opacity: 1;
+    padding: 12px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    width: 210px;
+    margin-bottom: 35px;
+}
+
+
+.paper-detail-container{
+    width: 100%;
+    min-width: 1300px;
+    background: #1b1b28;
+}
+
+.paper-detail-container-header{
+    width: 100%;
+    height: 400px;
+    background: url("../../images/img-source-1.jpg") no-repeat center bottom;
+}
+.paper-detail-container-header-c{
+    width: 1300px;
+    height: 400px;
+    margin: 0 auto;
+}
+.paper-detail-container-header-l{
+    width: 40%;
+    float: left;
+    margin: 70px auto;
+}
+.paper-detail-container-header-l h1{
+    font-size: 36px;
+    color: #FFFFFF;
+    font-weight:bold;
+}
+.p-1{
+    font-size: 14px;
+    color: #7385A2;
+    line-height: 40px;
+}
+.p-2{
+    font-size: 14px;
+    color: #7385A2;
+}
+.p-3{
+    font-size: 14px;
+    color: #7385A2;
+    line-height: 50px;
+}
+.p-3 a{
+    text-decoration: none;
+    font-size: 14px;
+    color: #4A90E2;
+}
+.paper-detail-container-header-r{
+    width: 60%;
+    height: 100%;
+    float: left;
+}
+
+.paper-detail-container-body-container{
+    background: #EEEEEE;
+}
+.paper-detail-container-body-container-inner{
+    width: 1300px;
+    margin: 0px auto;
+}
+.paper-detail-container-body-container-br{
+    padding-bottom: 20px;
+}
+.paper-detail-container-body-container-inner h1{
+    font-size: 36px;
+    color: #000000;
+    padding-top: 90px;
+    padding-bottom: 30px;
+    font-weight:bold;
+}
+.paper-detail-container-body-container-inner p{
+    font-size: 14px;
+    color: #2E4162;
+    line-height: 20px;
+}
+.inner-download{
+    width: 1300px;
+    height: 65px;
+    background: #F8F8F8;
+}
+.inner-download-l{
+    width: 70%;
+    text-align: left;
+    padding-left: 67px;
+    padding-top: 20px;
+    font-size: 18px;
+    color: #2E4162;
+    float: left
+}
+.inner-download-r{
+    width: 20%;
+    text-align: right;
+    padding-right: 40px;
+    padding-top: 20px;
+    font-size: 18px;
+    color: #4A90E2;
+    float: right;
+}
+.inner-download-r a{
+    ont-size: 18px;
+    color: #4A90E2;
+}
+.icon-file{
+    display: inline-block;
+    width: 17px;
+    height: 20px;
+    background: url("../../images/img-icon-file.png") no-repeat center center;
+    position: relative;
+    background-size: 100%;
+    float: left;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#net-list{
+    width:100%;
+    border-collapse:collapse;
+}
+#net-list td, #net-list th
+{
+    font-size:14px;
+    color: #2E4162;
+    border:0px;
+    text-align:center;
+    padding:3px 7px 2px 7px;
+    height: 65px;
+}
+#net-list th
+{
+    font-size: 18px;
+    color: #FFFFFF;
+    text-align:center;
+    padding-top:5px;
+    padding-bottom:4px;
+    background: #2E4162;
+}
+#net-list td
+{
+    color:#000000;
+    background: #F8F8F8;
+    border:1px #D8D8D8 solid;
+    border-left:none;
+    border-right:none;
+}
+
+a {
+    text-decoration: none
+}

